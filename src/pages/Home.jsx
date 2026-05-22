@@ -37,7 +37,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-center gap-5">
 
             <a
-  href="https://wa.me/6281268858897?text=Halo%20GeoMeasure%2B%2C%20saya%20ingin%20konsultasi%20pengukuran%20dan%20pemetaan."
+  href="https://wa.me/6281269858897?text=Halo%20GeoMeasure%2B%2C%20saya%20ingin%20konsultasi%20pengukuran%20dan%20pemetaan."
   target="_blank"
   rel="noreferrer"
 >
