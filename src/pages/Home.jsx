@@ -180,6 +180,19 @@ export default function Home() {
   className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
 /> 
 
+{/* FOTO 15 */}
+<img
+  src="survey 15.png"
+  alt="survey"
+  className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
+/>
+
+{/* FOTO 16 */}
+<img
+  src="survey 16.png"
+  alt="survey"
+  className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
+/>
     </div>
 
   </div>
