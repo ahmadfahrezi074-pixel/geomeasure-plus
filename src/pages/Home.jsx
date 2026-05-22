@@ -204,7 +204,7 @@ export default function Home() {
           <div className="bg-slate-100 p-12 rounded-3xl shadow-2xl">
 
             <p className="text-2xl mb-4">
-              📍 Yogyakarta, Indonesia
+              📍 Banyuasin sumatera selatan, Indonesia
             </p>
 
             <p className="text-2xl mb-4">

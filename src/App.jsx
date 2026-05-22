@@ -22,7 +22,7 @@ export default function App() {
             <img
               src="/logo.png"
               alt="GeoMeasure+"
-              className="w-16 h-16 object-contain"
+              className="w-10 h-10 md:w-16 md:h-16"
             />
 
             <div>
@@ -40,7 +40,7 @@ export default function App() {
           </div>
 
           {/* MENU */}
-          <div className="flex gap-8 text-white font-semibold">
+          <div className="hidden md:flex gap-8 text-white font-semibold">
 
             <Link
               to="/"
