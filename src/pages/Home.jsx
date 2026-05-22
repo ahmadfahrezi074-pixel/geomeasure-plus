@@ -1,240 +1,235 @@
-import { Link } from 'react-router-dom'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/css";
 
 export default function Home() {
 
   return (
 
-    <>
+    <div className="w-full overflow-hidden bg-slate-950 text-white">
 
       {/* HERO SECTION */}
       <section
-        className="min-h-screen bg-cover bg-center relative flex items-center"
+        className="relative min-h-screen flex items-center justify-center px-6 md:px-20"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1628158145409-9e222b56cc0b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3VydmV5b3J8ZW58MHx8MHx8fDA%3D')",
+            "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
 
-        {/* OVERLAY */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
 
-        {/* CONTENT */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
+        {/* Content */}
+        <div className="relative z-10 text-center max-w-5xl">
 
-          <div className="max-w-3xl">
+          <h1 className="text-4xl md:text-7xl font-black leading-tight mb-6">
+            GeoMeasure+
+          </h1>
 
-            <h1 className="text-7xl font-bold text-white leading-tight mb-8">
-              GeoMeasure+
-            </h1>
+          <p className="text-lg md:text-2xl text-slate-200 mb-10">
+            Peta Akurat, Masa Depan Pasti
+          </p>
 
-            <p className="text-2xl text-slate-200 leading-relaxed mb-10">
+          <div className="flex flex-col md:flex-row justify-center gap-5">
 
-              Platform digital pengukuran, pemetaan,
-              dan visualisasi geospasial modern.
+            <button className="bg-cyan-500 hover:bg-cyan-400 px-8 py-4 rounded-2xl text-lg font-semibold transition duration-300 shadow-2xl hover:scale-105">
+              Konsultasi Sekarang
+            </button>
 
-            </p>
-
-            <div className="flex gap-4 flex-wrap">
-
-              <a
-                href="https://wa.me/6281269858897"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-green-500 text-white px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition"
-              >
-                Konsultasi Gratis
-              </a>
-
-              <Link
-                to="/gis"
-                className="border border-white text-white px-8 py-4 rounded-2xl hover:bg-white hover:text-black transition"
-              >
-                Explore GIS
-              </Link>
-
-            </div>
+            <button className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 px-8 py-4 rounded-2xl text-lg font-semibold transition duration-300 hover:scale-105">
+              Lihat Layanan
+            </button>
 
           </div>
 
         </div>
 
       </section>
-{/* GALLERY SURVEYOR */}
-<section className="bg-white py-24 px-6">
 
-  <div className="max-w-7xl mx-auto">
+      {/* ABOUT */}
+      <section className="py-28 px-6 md:px-20">
 
-    <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
-      <h2 className="text-6xl font-bold text-blue-900 mb-6">
-        Survey Activities
-      </h2>
+          <div>
 
-      <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold mb-8">
+              Tentang GeoMeasure+
+            </h1>
 
-        Dokumentasi kegiatan pengukuran,
-        pemetaan,
-        survey lapangan,
-        dan teknologi geospasial modern di Indonesia.
+            <p className="text-slate-300 text-lg leading-relaxed mb-6">
+              GeoMeasure+ merupakan startup geospasial modern yang bergerak
+              dalam bidang pengukuran dan pemetaan berbasis teknologi digital.
+            </p>
 
-      </p>
+            <p className="text-slate-400 text-lg leading-relaxed mb-6">
+              Kami menggunakan teknologi GNSS, Drone/UAV, dan Sistem Informasi
+              Geografis (SIG) untuk menghasilkan data spasial yang akurat,
+              transparan, dan profesional.
+            </p>
 
-    </div>
+            <p className="text-slate-400 text-lg leading-relaxed">
+              GeoMeasure+ hadir untuk membantu masyarakat, pemerintah desa,
+              perusahaan, dan sektor swasta dalam pengukuran tanah serta
+              pemetaan wilayah secara modern.
+            </p>
 
-    <div className="grid md:grid-cols-4 gap-8">
+          </div>
 
-      {/* FOTO 1 */}
-      <img
-        src="https://stpn.ac.id/frontend/assets/images/gallery1.jpg"
-        alt="survey"
-        className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-      />
+          <div>
 
-      {/* FOTO 2 */}
-      <img
-        src="survey 7.png"
-        alt="survey"
-        className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-      />
+            <img
+              src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=1974&auto=format&fit=crop"
+              alt="survey"
+              className="rounded-[40px] shadow-2xl object-cover h-[500px] w-full"
+            />
 
-      {/* FOTO 3 */}
-      <img
-        src="survey 8.png"
-        alt="survey"
-        className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-      />
+          </div>
 
-      {/* FOTO 4 */}
-      <img
-        src="survey 2.png"
-        alt="survey"
-        className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-      />
+        </div>
 
-      {/* FOTO 5 */}
-      <img
-        src="survey 3.png"
-        alt="survey"
-        className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-      />
+      </section>
 
-      {/* FOTO 6 */}
-      <img
-        src="survey 4.png"
-        alt="survey"
-        className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-      />
+      {/* GALLERY */}
+      <section className="py-24 px-6 md:px-20 bg-gradient-to-b from-slate-950 to-slate-900">
 
-      {/* FOTO 7 */}
-      <img
-        src="survey 5.png"
-        alt="survey"
-        className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-      />
+        <h1 className="text-4xl md:text-6xl font-bold text-center mb-6">
+          Dokumentasi Survey Lapangan
+        </h1>
 
-      {/* FOTO 8 */}
-      <img
-        src="survey 6.png"
-        alt="survey"
-        className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-      />
-      {/* FOTO 9 */}
-<img
-  src="survey 9.png"
-  alt="survey"
-  className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-/>
+        <p className="text-center text-slate-400 text-lg mb-16">
+          Aktivitas pengukuran, pemetaan drone, GNSS, dan survey geospasial.
+        </p>
 
-{/* FOTO 10 */}
-<img
-  src="survey 10.png"
-  alt="survey"
-  className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-/>
+        {/* BARIS 1 */}
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 4 },
+          }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          className="mb-8"
+        >
+          {[
+            "survey 2.png",
+            "survey 3.png",
+            "survey 4.png",
+            "survey 5.png",
+            "survey 6.png",
+            "survey 7.png",
+            "survey 8.png",
+            "survey 9.png",
+          ].map((img, index) => (
 
-{/* FOTO 11 */}
-<img
-  src="survey 11.png"
-  alt="survey"
-  className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-/>
+            <SwiperSlide key={index}>
 
-{/* FOTO 12 */}
-<img
-  src="survey 12.png"
-  alt="survey"
-  className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-/>
+              <img
+                src={img}
+                alt="survey"
+                onClick={() => window.open(img)}
+                className="rounded-3xl h-[250px] w-full object-cover shadow-2xl hover:scale-105 hover:rotate-1 transition duration-500 cursor-pointer"
+              />
 
-{/* FOTO 13 */}
-<img
-  src="survey 13.png"
-  alt="survey"
-  className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-/>
+            </SwiperSlide>
 
-{/* FOTO 14 */}
-<img
-  src="survey 14.png"
-  alt="survey"
-  className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-/> 
+          ))}
+        </Swiper>
 
-{/* FOTO 15 */}
-<img
-  src="survey 15.png"
-  alt="survey"
-  className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-/>
+        {/* BARIS 2 */}
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 4 },
+          }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+        >
+          {[
+            "survey 10.png",
+            "survey 11.png",
+            "survey 12.png",
+            "survey 13.png",
+            "survey 14.png",
+            "survey 15.png",
+            "survey 16.png",
+          ].map((img, index) => (
 
-{/* FOTO 16 */}
-<img
-  src="survey 16.png"
-  alt="survey"
-  className="rounded-3xl shadow-2xl h-[250px] w-full object-cover hover:scale-105 transition duration-300"
-/>
-    </div>
+            <SwiperSlide key={index}>
 
-  </div>
+              <img
+                src={img}
+                alt="survey"
+                onClick={() => window.open(img)}
+                className="rounded-3xl h-[250px] w-full object-cover shadow-2xl hover:scale-105 hover:-rotate-1 transition duration-500 cursor-pointer"
+              />
 
-</section>
+            </SwiperSlide>
+
+          ))}
+        </Swiper>
+
+      </section>
+
       {/* CONTACT */}
-      <section className="bg-white py-24 px-6">
+      <section className="py-28 px-6 md:px-20">
 
         <div className="max-w-5xl mx-auto text-center">
 
-          <h2 className="text-5xl font-bold text-blue-900 mb-8">
-            Contact Us
-          </h2>
+          <h1 className="text-4xl md:text-6xl font-bold mb-8">
+            Hubungi Kami
+          </h1>
 
-          <p className="text-xl text-slate-600 mb-12">
-
-            Hubungi GeoMeasure+ untuk konsultasi
-            pengukuran dan pemetaan digital.
-
+          <p className="text-slate-400 text-lg mb-4">
+            Banyuasin sumatera selatan, Indonesia
           </p>
 
-          <div className="bg-slate-100 p-12 rounded-3xl shadow-2xl">
+          <p className="text-slate-400 text-lg mb-4">
+            geomeasureplus@gmail.com
+          </p>
 
-            <p className="text-2xl mb-4">
-              📍 Banyuasin sumatera selatan, Indonesia
-            </p>
+          <p className="text-slate-400 text-lg mb-10">
+            WhatsApp: 081269858897
+          </p>
 
-            <p className="text-2xl mb-4">
-              📞 0812-6985-8897
-            </p>
-
-            <p className="text-2xl">
-              ✉️ geomeasureplus@gmail.com
-            </p>
-
-          </div>
+          <a
+            href="https://wa.me/6281269858897"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="bg-green-500 hover:bg-green-400 px-10 py-4 rounded-2xl text-lg font-semibold transition duration-300 shadow-2xl hover:scale-105">
+              Hubungi via WhatsApp
+            </button>
+          </a>
 
         </div>
 
       </section>
 
-    </>
+      {/* FOOTER */}
+      <footer className="border-t border-white/10 py-10 text-center text-slate-500">
+
+        GeoMeasure+ — Pengukuran Akurat untuk Semua
+
+      </footer>
+
+    </div>
 
   )
 
