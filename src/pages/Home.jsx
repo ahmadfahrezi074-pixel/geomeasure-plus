@@ -215,7 +215,7 @@ export default function Home() {
           </p>
 
           <a
-            href="https://wa.me/6281269858897"
+            href="https://wa.me/6281269858897?text=Halo%20GeoMeasure%2B%2C%20saya%20ingin%20konsultasi%20pengukuran%20dan%20pemetaan."
             target="_blank"
             rel="noreferrer"
           >
