@@ -46,9 +46,15 @@ export default function Home() {
   </button>
 </a>
 
-            <button className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 px-8 py-4 rounded-2xl text-lg font-semibold transition duration-300 hover:scale-105">
-              Lihat Layanan
-            </button>
+            <a href="/dashboard">
+
+  <button className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 px-8 py-4 rounded-2xl text-lg font-semibold transition duration-300 hover:scale-105">
+
+    Lihat Layanan
+
+  </button>
+
+</a>
 
           </div>
 
