@@ -36,9 +36,15 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row justify-center gap-5">
 
-            <button className="bg-cyan-500 hover:bg-cyan-400 px-8 py-4 rounded-2xl text-lg font-semibold transition duration-300 shadow-2xl hover:scale-105">
-              Konsultasi Sekarang
-            </button>
+            <a
+  href="https://wa.me/6281268858897?text=Halo%20GeoMeasure%2B%2C%20saya%20ingin%20konsultasi%20pengukuran%20dan%20pemetaan."
+  target="_blank"
+  rel="noreferrer"
+>
+  <button className="bg-cyan-500 hover:bg-cyan-400 px-8 py-4 rounded-2xl text-lg font-semibold transition duration-300 shadow-2xl hover:scale-105">
+    Konsultasi Sekarang
+  </button>
+</a>
 
             <button className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 px-8 py-4 rounded-2xl text-lg font-semibold transition duration-300 hover:scale-105">
               Lihat Layanan
