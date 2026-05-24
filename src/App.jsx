@@ -100,8 +100,7 @@ export default function App() {
           element={<Upload />}
         />
 
-<Route 
-path="/layanan" element={<Layanan />} />
+<Route path="/layanan" element={<Layanan />} />
       </Routes>
 
     </BrowserRouter>
