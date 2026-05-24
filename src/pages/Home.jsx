@@ -107,6 +107,74 @@ export default function Home() {
 
       </section>
 
+{/* PENJELASAN */}
+<section className="py-24 px-6 md:px-20 bg-slate-900">
+
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+    {/* KIRI */}
+    <div>
+
+      <p className="text-cyan-400 font-semibold mb-4 tracking-[4px] uppercase">
+        GeoMeasure+ Indonesia
+      </p>
+
+      <h1 className="text-4xl md:text-6xl font-black leading-tight mb-8">
+        Solusi Pengukuran &
+        <br />
+        Pemetaan Modern
+      </h1>
+
+      <p className="text-slate-300 text-lg leading-relaxed mb-6">
+        GeoMeasure+ merupakan startup geospasial modern yang menyediakan
+        layanan pengukuran tanah, pemetaan drone, dan sistem informasi
+        geografis berbasis teknologi digital.
+      </p>
+
+      <p className="text-slate-400 text-lg leading-relaxed mb-6">
+        Kami membantu masyarakat, pemerintah desa, dan sektor swasta
+        memperoleh data spasial yang akurat, transparan, dan terpercaya
+        menggunakan teknologi GNSS, UAV Drone, dan GIS modern.
+      </p>
+
+      <p className="text-slate-400 text-lg leading-relaxed">
+        Dengan konsep teknologi geospasial masa depan, GeoMeasure+
+        menghadirkan sistem pengukuran yang lebih cepat, efisien,
+        profesional, dan mudah diakses oleh semua kalangan masyarakat.
+      </p>
+
+    </div>
+
+    {/* KANAN */}
+    <div className="relative">
+
+      <img
+        src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5ce?q=80&w=1600&auto=format&fit=crop"
+        alt="GeoMeasure"
+        className="rounded-[40px] shadow-2xl w-full h-[500px] object-cover"
+      />
+
+      {/* CARD FLOATING */}
+      <div className="absolute -bottom-8 -left-8 bg-black/70 backdrop-blur-xl border border-white/10 p-8 rounded-[30px] shadow-2xl">
+
+        <h1 className="text-5xl font-black text-cyan-400 mb-2">
+          100+
+        </h1>
+
+        <p className="text-slate-300">
+          Survey & Pemetaan
+          <br />
+          Telah Dilakukan
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
       {/* GALLERY */}
       <section className="py-24 px-6 md:px-20 bg-gradient-to-b from-slate-950 to-slate-900">
 
