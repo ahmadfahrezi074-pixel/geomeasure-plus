@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import GISMap from "./pages/GISMap"
 import Dashboard from "./pages/Dashboard"
 import Upload from "./pages/Upload"
+import Layanan from "./pages/Layanan";
 
 export default function App() {
 
@@ -99,6 +100,8 @@ export default function App() {
           element={<Upload />}
         />
 
+<Route 
+path="/layanan" element={<Layanan />} />
       </Routes>
 
     </BrowserRouter>
