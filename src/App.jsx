@@ -1,75 +1,79 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-import Home from "./pages/Home"
-import GISMap from "./pages/GISMap"
-import Dashboard from "./pages/Dashboard"
-import Upload from "./pages/Upload"
+import Home from "./pages/Home";
+import GISMap from "./pages/GISMap";
 import Layanan from "./pages/Layanan";
+import Upload from "./pages/Upload";
 
 export default function App() {
-
   return (
-
     <BrowserRouter>
 
       {/* NAVBAR */}
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-black/40 backdrop-blur-xl px-8 py-4 rounded-3xl shadow-2xl w-[90%] max-w-7xl border border-white/10">
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-7xl">
 
-        <div className="flex items-center justify-between">
+        <div className="bg-black/40 backdrop-blur-2xl border border-white/10 rounded-[30px] px-6 md:px-10 py-4 shadow-2xl">
 
-          {/* LOGO */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center justify-between">
 
-            <img
-              src="/logo.png"
-              alt="GeoMeasure+"
-              className="w-10 h-10 md:w-16 md:h-16"
-            />
-
-            <div>
-
-              <h1 className="text-white text-2xl font-bold">
-                GeoMeasure+
-              </h1>
-
-              <p className="text-slate-300 text-sm">
-                Smart Geospatial Solution
-              </p>
-
-            </div>
-
-          </div>
-
-          {/* MENU */}
-          <div className="hidden md:flex gap-8 text-white font-semibold">
-
+            {/* LOGO */}
             <Link
               to="/"
-              className="hover:text-cyan-300 transition"
+              className="flex items-center gap-4"
             >
-              Home
+
+              <img
+                src="/logo.png"
+                alt="GeoMeasure+"
+                className="w-12 h-12 md:w-14 md:h-14 object-contain"
+              />
+
+              <div>
+
+                <h1 className="text-white text-xl md:text-2xl font-bold tracking-wide">
+                  GeoMeasure+
+                </h1>
+
+                <p className="text-slate-300 text-xs md:text-sm">
+                  Smart Geospatial Solution
+                </p>
+
+              </div>
+
             </Link>
 
-            <Link
-              to="/gis"
-              className="hover:text-cyan-300 transition"
-            >
-              GIS Map
-            </Link>
+            {/* MENU DESKTOP */}
+            <div className="hidden md:flex items-center gap-8 text-white font-semibold">
 
-            <Link
-              to="/dashboard"
-              className="hover:text-cyan-300 transition"
-            >
-              Dashboard
-            </Link>
+              <Link
+                to="/"
+                className="hover:text-cyan-300 transition duration-300"
+              >
+                Home
+              </Link>
 
-            <Link
-              to="/upload"
-              className="hover:text-cyan-300 transition"
-            >
-              Search
-            </Link>
+              <Link
+                to="/gis"
+                className="hover:text-cyan-300 transition duration-300"
+              >
+                GIS Map
+              </Link>
+
+              <Link
+                to="/layanan"
+                className="hover:text-cyan-300 transition duration-300"
+              >
+                Layanan
+              </Link>
+
+              <Link
+                to="/upload"
+                className="hover:text-cyan-300 transition duration-300"
+              >
+                Search
+              </Link>
+
+            </div>
 
           </div>
 
@@ -91,8 +95,8 @@ export default function App() {
         />
 
         <Route
-          path="/dashboard"
-          element={<Dashboard />}
+          path="/layanan"
+          element={<Layanan />}
         />
 
         <Route
@@ -100,11 +104,8 @@ export default function App() {
           element={<Upload />}
         />
 
-<Route path="/layanan" element={<Layanan />} />
       </Routes>
 
     </BrowserRouter>
-
-  )
-
+  );
 }
