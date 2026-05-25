@@ -15,6 +15,8 @@ export default function Layanan() {
 
   const [inputValue, setInputValue] = useState({});
 
+  const [geoDesaType, setGeoDesaType] = useState({});
+
   const layanan = [
 
     {
@@ -28,7 +30,7 @@ export default function Layanan() {
       color: "from-cyan-500 to-blue-700",
 
       kategori:
-        "Masyarakat Berpenghasilan Rendah (MBR) & Swadaya Mandiri Desa",
+        "Masyarakat Berpenghasilan Rendah (MBR) & Masyarakat Reguler",
 
       desc:
         "Asistensi teknis kolektif tingkat desa untuk memetakan batas bidang tanah dari nol secara menyeluruh guna menyiapkan dokumen pra-pendaftaran tanah massal bebas sengketa.",
@@ -36,7 +38,6 @@ export default function Layanan() {
       persyaratan: [
         "Fotokopi KTP & KK",
         "Surat Alas Hak / Sporadik",
-        "SKTM / DTKS Kemensos",
         "Surat Persetujuan Batas",
         "Patok batas sementara",
       ],
@@ -52,7 +53,7 @@ export default function Layanan() {
       output:
         "Berkas Fisik Siap Loket, SHP TM-3°, Peta Bidang, Arsip Digital",
 
-      calculatorType: "geoDesaSubsidi",
+      calculatorType: "geoDesa",
     },
 
     {
@@ -169,17 +170,33 @@ export default function Layanan() {
 
   ];
 
-  const calculatePrice = (type, value) => {
+  const calculatePrice = (type, value, kategori) => {
 
     const val = Number(value) || 0;
 
     switch (type) {
 
-      case "geoDesaSubsidi":
+      case "geoDesa":
 
-        if (val <= 2) return 250000;
+        // SUBSIDI
+        if (kategori === "subsidi") {
 
-        return 250000 + ((val - 2) * 30000);
+          if (val <= 2) return 250000;
+
+          return 250000 + ((val - 2) * 30000);
+
+        }
+
+        // REGULER
+        if (kategori === "reguler") {
+
+          if (val <= 2) return 550000;
+
+          return 550000 + ((val - 2) * 50000);
+
+        }
+
+        return 0;
 
       case "geoTrace":
 
@@ -269,7 +286,7 @@ export default function Layanan() {
               `}
             >
 
-              {/* TOP */}
+              {/* HEADER */}
               <div className={`bg-gradient-to-r ${item.color} p-8`}>
 
                 <div className="w-20 h-20 rounded-3xl bg-white/10 border border-white/10 flex items-center justify-center mb-8">
@@ -468,6 +485,37 @@ export default function Layanan() {
 
                         <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
 
+                          {/* GEODESA OPTION */}
+                          {item.calculatorType === "geoDesa" && (
+
+                            <select
+                              value={geoDesaType[index] || ""}
+                              onChange={(e) =>
+                                setGeoDesaType({
+                                  ...geoDesaType,
+                                  [index]: e.target.value,
+                                })
+                              }
+                              className="w-full bg-slate-900 border border-white/10 rounded-2xl px-5 py-4 text-white outline-none mb-6"
+                            >
+
+                              <option value="">
+                                Pilih Kategori GeoDesa
+                              </option>
+
+                              <option value="subsidi">
+                                Masyarakat Bersubsidi / Berpenghasilan Rendah
+                              </option>
+
+                              <option value="reguler">
+                                Masyarakat Reguler / Umum
+                              </option>
+
+                            </select>
+
+                          )}
+
+                          {/* INPUT */}
                           <input
                             type="number"
                             placeholder={
@@ -485,6 +533,7 @@ export default function Layanan() {
                             className="w-full bg-slate-900 border border-white/10 rounded-2xl px-5 py-4 text-white outline-none mb-6"
                           />
 
+                          {/* RESULT */}
                           <div className="bg-cyan-500/10 border border-cyan-400/20 rounded-2xl p-6">
 
                             <p className="text-slate-300 mb-2">
@@ -493,14 +542,15 @@ export default function Layanan() {
 
                             </p>
 
-                            <h1 className="text-4xl font-black text-cyan-400">
+                            <h1 className="text-4xl font-black text-cyan-400 leading-tight">
 
-                              Rp{" "}
-
-                              {calculatePrice(
-                                item.calculatorType,
-                                inputValue[index]
-                              ).toLocaleString("id-ID")}
+                              {Number(inputValue[index]) > 0
+                                ? `Rp ${calculatePrice(
+                                    item.calculatorType,
+                                    inputValue[index],
+                                    geoDesaType[index]
+                                  ).toLocaleString("id-ID")}`
+                                : "Estimasi: Rp 0"}
 
                             </h1>
 
@@ -511,11 +561,17 @@ export default function Layanan() {
 
                             <p className="text-slate-400 leading-relaxed text-sm">
 
-                              Simulasi biaya merupakan estimasi awal
-                              berdasarkan algoritma layanan GeoMeasure+
-                              dan dapat berubah sesuai kondisi medan,
-                              radius wilayah, jumlah bidang,
-                              serta kebutuhan teknis lapangan.
+                              • GeoDesa Subsidi:
+                              Rp250.000 untuk 2 Ha pertama +
+                              Rp30.000/Ha berikutnya.
+
+                            </p>
+
+                            <p className="text-slate-400 leading-relaxed text-sm mt-3">
+
+                              • GeoDesa Reguler:
+                              Rp550.000 untuk 2 Ha pertama +
+                              Rp50.000/Ha berikutnya.
 
                             </p>
 
