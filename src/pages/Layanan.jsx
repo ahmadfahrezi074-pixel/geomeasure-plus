@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import {
   ChevronDown,
   ChevronUp,
@@ -202,236 +203,327 @@ export default function Layanan() {
 
   return (
 
-    <div className="min-h-screen bg-slate-950 text-white px-6 md:px-20 py-32">
+    <div className="min-h-screen bg-slate-950 text-white px-6 md:px-20 py-32 overflow-hidden">
 
       {/* HEADER */}
       <div className="max-w-7xl mx-auto text-center mb-24">
 
-        <p className="text-cyan-400 uppercase tracking-[5px] font-semibold mb-5">
+        <p className="text-cyan-400 uppercase tracking-[6px] font-semibold mb-5">
+
           GeoMeasure+ Ecosystem
+
         </p>
 
-        <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
+        <h1 className="text-5xl md:text-7xl font-black leading-tight mb-8">
 
           Katalog Layanan
           <br />
 
           <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+
             GeoMeasure+
+
           </span>
 
         </h1>
 
         <p className="text-slate-400 text-lg max-w-4xl mx-auto leading-relaxed">
 
-          Ekosistem layanan pengukuran dan pemetaan modern berbasis
-          teknologi geospasial digital untuk masyarakat, pemerintah,
+          Platform layanan pengukuran dan pemetaan berbasis teknologi
+          geospasial modern untuk masyarakat, pemerintah daerah,
           dan sektor korporasi.
 
         </p>
 
       </div>
 
-      {/* CARD */}
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-center items-start gap-10">
+      {/* SERVICES */}
+      <div className="max-w-7xl mx-auto">
 
-        {layanan.map((item, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
 
-          <div
-            key={index}
-            className="w-full lg:w-[47%] xl:w-[31%] bg-white/5 border border-white/10 rounded-[40px] overflow-hidden backdrop-blur-2xl shadow-2xl transition-all duration-500 hover:border-cyan-400/30 hover:shadow-cyan-500/10"
-            style={{
-              alignSelf: "flex-start",
-            }}
-          >
+          {layanan.map((item, index) => (
 
-            {/* HEADER CARD */}
-            <div className={`bg-gradient-to-r ${item.color} p-8`}>
+            <div
+              key={index}
+              className={`
 
-              <div className="w-20 h-20 rounded-3xl bg-white/10 border border-white/10 flex items-center justify-center mb-8">
+              bg-white/5
+              border
+              border-white/10
+              rounded-[40px]
+              overflow-hidden
+              backdrop-blur-2xl
+              shadow-2xl
+              transition-all
+              duration-700
+              hover:border-cyan-400/30
+              hover:shadow-cyan-500/10
+              hover:-translate-y-2
 
-                {item.icon}
+              ${openIndex === index
+                  ? "md:col-span-2"
+                  : ""
+                }
+
+              `}
+            >
+
+              {/* TOP */}
+              <div className={`bg-gradient-to-r ${item.color} p-8`}>
+
+                <div className="w-20 h-20 rounded-3xl bg-white/10 border border-white/10 flex items-center justify-center mb-8">
+
+                  {item.icon}
+
+                </div>
+
+                <h1 className="text-4xl font-black mb-4">
+
+                  {item.title}
+
+                </h1>
+
+                <p className="text-white/90 text-lg leading-relaxed mb-6">
+
+                  {item.subtitle}
+
+                </p>
+
+                <div className="bg-black/20 border border-white/10 rounded-2xl px-5 py-4">
+
+                  <p className="text-sm uppercase tracking-[3px] text-white/70 mb-2">
+
+                    Target Layanan
+
+                  </p>
+
+                  <p className="text-lg font-semibold">
+
+                    {item.kategori}
+
+                  </p>
+
+                </div>
 
               </div>
 
-              <h1 className="text-4xl font-black mb-4">
-                {item.title}
-              </h1>
+              {/* CONTENT */}
+              <div className="p-8">
 
-              <p className="text-white/90 text-lg leading-relaxed mb-6">
+                <p className="text-slate-300 text-lg leading-relaxed mb-10">
 
-                {item.subtitle}
+                  {item.desc}
 
-              </p>
-
-              <div className="bg-black/20 border border-white/10 rounded-2xl px-5 py-4">
-
-                <p className="text-sm uppercase tracking-[3px] text-white/70 mb-2">
-                  Target Layanan
                 </p>
 
-                <p className="text-lg font-semibold">
-                  {item.kategori}
-                </p>
-
-              </div>
-
-            </div>
-
-            {/* CONTENT */}
-            <div className="p-8">
-
-              <p className="text-slate-300 text-lg leading-relaxed mb-10">
-
-                {item.desc}
-
-              </p>
-
-              {/* BUTTON */}
-              <button
-                onClick={() =>
-                  setOpenIndex(openIndex === index ? null : index)
-                }
-                className={`w-full py-5 rounded-2xl font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3
-
-                ${openIndex === index
-                    ? "bg-red-500 hover:bg-red-400"
-                    : "bg-cyan-500 hover:bg-cyan-400"
+                {/* BUTTON */}
+                <button
+                  onClick={() =>
+                    setOpenIndex(
+                      openIndex === index ? null : index
+                    )
                   }
-                `}
-              >
+                  className={`
 
-                {openIndex === index
-                  ? "Tutup Detail"
-                  : "Lihat Detail"}
+                  w-full
+                  py-5
+                  rounded-2xl
+                  font-bold
+                  text-lg
+                  transition-all
+                  duration-300
+                  flex
+                  items-center
+                  justify-center
+                  gap-3
 
-                {openIndex === index
-                  ? <ChevronUp />
-                  : <ChevronDown />
-                }
+                  ${openIndex === index
+                      ? "bg-red-500 hover:bg-red-400"
+                      : "bg-cyan-500 hover:bg-cyan-400"
+                    }
 
-              </button>
+                  `}
+                >
 
-              {/* DETAIL */}
-              <div
-                className={`overflow-hidden transition-all duration-700 ease-in-out
+                  {openIndex === index
+                    ? "Tutup Detail"
+                    : "Lihat Detail"}
 
-                ${openIndex === index
-                    ? "max-h-[5000px] opacity-100 mt-10"
-                    : "max-h-0 opacity-0"
+                  {openIndex === index
+                    ? <ChevronUp />
+                    : <ChevronDown />
                   }
-                `}
-              >
 
-                {/* PERSYARATAN */}
-                <div className="mb-10">
+                </button>
 
-                  <h2 className="text-cyan-400 text-2xl font-bold mb-5">
-                    Persyaratan
-                  </h2>
+                {/* DETAIL */}
+                <div
+                  className={`
 
-                  <div className="space-y-4">
+                  overflow-hidden
+                  transition-all
+                  duration-700
+                  ease-in-out
 
-                    {item.persyaratan.map((syarat, i) => (
+                  ${openIndex === index
+                      ? "max-h-[5000px] opacity-100 mt-10"
+                      : "max-h-0 opacity-0"
+                    }
 
-                      <div
-                        key={i}
-                        className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-slate-300"
-                      >
+                  `}
+                >
 
-                        • {syarat}
+                  <div className="grid lg:grid-cols-2 gap-10">
+
+                    {/* LEFT */}
+                    <div>
+
+                      {/* PERSYARATAN */}
+                      <div className="mb-10">
+
+                        <h2 className="text-cyan-400 text-2xl font-bold mb-5">
+
+                          Persyaratan
+
+                        </h2>
+
+                        <div className="space-y-4">
+
+                          {item.persyaratan.map((syarat, i) => (
+
+                            <div
+                              key={i}
+                              className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-slate-300"
+                            >
+
+                              • {syarat}
+
+                            </div>
+
+                          ))}
+
+                        </div>
 
                       </div>
 
-                    ))}
+                      {/* SPESIFIKASI */}
+                      <div>
 
-                  </div>
+                        <h2 className="text-cyan-400 text-2xl font-bold mb-5">
 
-                </div>
+                          Spesifikasi Teknis
 
-                {/* SPESIFIKASI */}
-                <div className="mb-10">
+                        </h2>
 
-                  <h2 className="text-cyan-400 text-2xl font-bold mb-5">
-                    Spesifikasi Teknis
-                  </h2>
+                        <div className="space-y-4">
 
-                  <div className="space-y-4">
+                          {item.spesifikasi.map((spec, i) => (
 
-                    {item.spesifikasi.map((spec, i) => (
+                            <div
+                              key={i}
+                              className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-slate-300"
+                            >
 
-                      <div
-                        key={i}
-                        className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-slate-300"
-                      >
+                              • {spec}
 
-                        • {spec}
+                            </div>
+
+                          ))}
+
+                        </div>
 
                       </div>
 
-                    ))}
+                    </div>
 
-                  </div>
+                    {/* RIGHT */}
+                    <div>
 
-                </div>
+                      {/* OUTPUT */}
+                      <div className="mb-10">
 
-                {/* OUTPUT */}
-                <div className="mb-10">
+                        <h2 className="text-cyan-400 text-2xl font-bold mb-5">
 
-                  <h2 className="text-cyan-400 text-2xl font-bold mb-5">
-                    Output Produk Digital
-                  </h2>
+                          Output Produk Digital
 
-                  <div className="bg-white/5 border border-white/10 rounded-3xl p-6 text-slate-300 leading-relaxed">
+                        </h2>
 
-                    {item.output}
+                        <div className="bg-white/5 border border-white/10 rounded-3xl p-6 text-slate-300 leading-relaxed">
 
-                  </div>
+                          {item.output}
 
-                </div>
+                        </div>
 
-                {/* SIMULASI */}
-                <div>
+                      </div>
 
-                  <h2 className="text-cyan-400 text-2xl font-bold mb-5">
-                    Simulasi Biaya
-                  </h2>
+                      {/* SIMULASI */}
+                      <div>
 
-                  <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
+                        <h2 className="text-cyan-400 text-2xl font-bold mb-5">
 
-                    <input
-                      type="number"
-                      placeholder={
-                        item.calculatorType === "geoGov"
-                          ? "Masukkan jumlah NOP"
-                          : "Masukkan luas lahan (Ha)"
-                      }
-                      value={inputValue[index] || ""}
-                      onChange={(e) =>
-                        setInputValue({
-                          ...inputValue,
-                          [index]: e.target.value,
-                        })
-                      }
-                      className="w-full bg-slate-900 border border-white/10 rounded-2xl px-5 py-4 text-white outline-none mb-6"
-                    />
+                          Simulasi Biaya
 
-                    <div className="bg-cyan-500/10 border border-cyan-400/20 rounded-2xl p-6">
+                        </h2>
 
-                      <p className="text-slate-300 mb-2">
-                        Estimasi Total Biaya
-                      </p>
+                        <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
 
-                      <h1 className="text-4xl font-black text-cyan-400">
+                          <input
+                            type="number"
+                            placeholder={
+                              item.calculatorType === "geoGov"
+                                ? "Masukkan jumlah NOP"
+                                : "Masukkan luas lahan (Ha)"
+                            }
+                            value={inputValue[index] || ""}
+                            onChange={(e) =>
+                              setInputValue({
+                                ...inputValue,
+                                [index]: e.target.value,
+                              })
+                            }
+                            className="w-full bg-slate-900 border border-white/10 rounded-2xl px-5 py-4 text-white outline-none mb-6"
+                          />
 
-                        Rp{" "}
+                          <div className="bg-cyan-500/10 border border-cyan-400/20 rounded-2xl p-6">
 
-                        {calculatePrice(
-                          item.calculatorType,
-                          inputValue[index]
-                        ).toLocaleString("id-ID")}
+                            <p className="text-slate-300 mb-2">
 
-                      </h1>
+                              Estimasi Total Biaya
+
+                            </p>
+
+                            <h1 className="text-4xl font-black text-cyan-400">
+
+                              Rp{" "}
+
+                              {calculatePrice(
+                                item.calculatorType,
+                                inputValue[index]
+                              ).toLocaleString("id-ID")}
+
+                            </h1>
+
+                          </div>
+
+                          {/* INFO */}
+                          <div className="mt-6 bg-white/5 border border-white/10 rounded-2xl p-5">
+
+                            <p className="text-slate-400 leading-relaxed text-sm">
+
+                              Simulasi biaya merupakan estimasi awal
+                              berdasarkan algoritma layanan GeoMeasure+
+                              dan dapat berubah sesuai kondisi medan,
+                              radius wilayah, jumlah bidang,
+                              serta kebutuhan teknis lapangan.
+
+                            </p>
+
+                          </div>
+
+                        </div>
+
+                      </div>
 
                     </div>
 
@@ -443,9 +535,9 @@ export default function Layanan() {
 
             </div>
 
-          </div>
+          ))}
 
-        ))}
+        </div>
 
       </div>
 
