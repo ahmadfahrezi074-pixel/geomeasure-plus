@@ -64,108 +64,160 @@ export default function Home() {
       </section>
 
       {/* ABOUT */}
-      <section className="py-28 px-6 md:px-20">
+<section className="relative py-32 px-6 md:px-20 overflow-hidden">
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+  {/* BACKGROUND GLOW */}
+  <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-cyan-500/10 blur-[120px] rounded-full"></div>
 
-          <div>
+  <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-blue-500/10 blur-[120px] rounded-full"></div>
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-8">
-              Tentang GeoMeasure+
-            </h1>
+  <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center relative z-10">
 
-            <p className="text-slate-300 text-lg leading-relaxed mb-6">
-              GeoMeasure+ merupakan startup geospasial modern yang bergerak
-              dalam bidang pengukuran dan pemetaan berbasis teknologi digital.
-            </p>
+    {/* IMAGE */}
+    <div className="relative group">
 
-            <p className="text-slate-400 text-lg leading-relaxed mb-6">
-              Kami menggunakan teknologi GNSS, Drone/UAV, dan Sistem Informasi
-              Geografis (SIG) untuk menghasilkan data spasial yang akurat,
-              transparan, dan profesional.
-            </p>
+      {/* GLOW */}
+      <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-[45px] blur-2xl opacity-60 group-hover:opacity-100 transition duration-700"></div>
 
-            <p className="text-slate-400 text-lg leading-relaxed">
-              GeoMeasure+ hadir untuk membantu masyarakat, pemerintah desa,
-              perusahaan, dan sektor swasta dalam pengukuran tanah serta
-              pemetaan wilayah secara modern.
-            </p>
+      <img
+        src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5ce?q=80&w=2070&auto=format&fit=crop"
+        alt="GeoMeasure"
+        className="relative rounded-[40px] shadow-2xl object-cover h-[650px] w-full hover:scale-[1.02] transition duration-700"
+      />
 
-          </div>
+      {/* FLOATING CARD */}
+      <div className="absolute bottom-8 left-8 bg-black/40 backdrop-blur-2xl border border-white/10 rounded-3xl px-6 py-5 shadow-2xl">
 
-          <div>
+        <p className="text-cyan-400 uppercase tracking-[4px] text-sm mb-2">
+          GeoSpatial Technology
+        </p>
 
-            <img
-              src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=1974&auto=format&fit=crop"
-              alt="survey"
-              className="rounded-[40px] shadow-2xl object-cover h-[500px] w-full"
-            />
+        <h1 className="text-2xl font-bold text-white leading-snug">
+          Teknologi Modern <br />
+          Untuk Data Presisi
+        </h1>
 
-          </div>
-
-        </div>
-
-      </section>
-
-{/* PENJELASAN */}
-<section className="py-24 px-6 md:px-20 bg-slate-900">
-
-  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-
-    {/* KIRI */}
-    <div>
-
-      <p className="text-cyan-400 font-semibold mb-4 tracking-[4px] uppercase">
-        GeoMeasure+ Indonesia
-      </p>
-
-      <h1 className="text-4xl md:text-6xl font-black leading-tight mb-8">
-        Solusi Pengukuran &
-        <br />
-        Pemetaan Modern
-      </h1>
-
-      <p className="text-slate-300 text-lg leading-relaxed mb-6">
-        GeoMeasure+ merupakan startup geospasial modern yang menyediakan
-        layanan pengukuran tanah, pemetaan drone, dan sistem informasi
-        geografis berbasis teknologi digital.
-      </p>
-
-      <p className="text-slate-400 text-lg leading-relaxed mb-6">
-        Kami membantu masyarakat, pemerintah desa, dan sektor swasta
-        memperoleh data spasial yang akurat, transparan, dan terpercaya
-        menggunakan teknologi GNSS, UAV Drone, dan GIS modern.
-      </p>
-
-      <p className="text-slate-400 text-lg leading-relaxed">
-        Dengan konsep teknologi geospasial masa depan, GeoMeasure+
-        menghadirkan sistem pengukuran yang lebih cepat, efisien,
-        profesional, dan mudah diakses oleh semua kalangan masyarakat.
-      </p>
+      </div>
 
     </div>
 
-    {/* KANAN */}
-    <div className="relative">
+    {/* CONTENT */}
+    <div>
 
-      <img
-        src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5ce?q=80&w=1600&auto=format&fit=crop"
-        alt="GeoMeasure"
-        className="rounded-[40px] shadow-2xl w-full h-[500px] object-cover"
-      />
+      <p className="text-cyan-400 uppercase tracking-[5px] font-semibold mb-5">
+        Tentang GeoMeasure+
+      </p>
 
-      {/* CARD FLOATING */}
-      <div className="absolute -bottom-8 -left-8 bg-black/70 backdrop-blur-xl border border-white/10 p-8 rounded-[30px] shadow-2xl">
+      <h1 className="text-5xl md:text-7xl font-black leading-tight mb-10">
 
-        <h1 className="text-5xl font-black text-cyan-400 mb-2">
-          100+
-        </h1>
+        Solusi Geospasial
+        <br />
 
-        <p className="text-slate-300">
-          Survey & Pemetaan
-          <br />
-          Telah Dilakukan
-        </p>
+        <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          Modern & Profesional
+        </span>
+
+      </h1>
+
+      <p className="text-slate-300 text-xl leading-relaxed mb-8">
+
+        GeoMeasure+ hadir sebagai platform layanan pengukuran dan pemetaan
+        berbasis teknologi geospasial modern yang menggabungkan presisi,
+        efisiensi, dan visualisasi data digital dalam satu sistem terpadu.
+
+      </p>
+
+      <p className="text-slate-400 text-lg leading-relaxed mb-12">
+
+        Menggunakan teknologi GNSS Geodetic, Drone Mapping, dan Sistem
+        Informasi Geografis (SIG), GeoMeasure+ membantu masyarakat,
+        pemerintah desa, serta sektor profesional memperoleh data spasial
+        yang lebih akurat, transparan, dan mudah diakses secara digital.
+
+      </p>
+
+      {/* FEATURE GRID */}
+      <div className="grid md:grid-cols-2 gap-6">
+
+        {/* CARD 1 */}
+        <div className="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl hover:bg-white/10 transition duration-500">
+
+          <div className="w-14 h-14 rounded-2xl bg-cyan-500/20 flex items-center justify-center mb-5 text-cyan-400 text-2xl">
+
+            🌍
+
+          </div>
+
+          <h1 className="text-2xl font-bold mb-3">
+            Data Presisi
+          </h1>
+
+          <p className="text-slate-400 leading-relaxed">
+            Pengukuran modern dengan tingkat akurasi tinggi menggunakan
+            teknologi geospasial terkini.
+          </p>
+
+        </div>
+
+        {/* CARD 2 */}
+        <div className="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl hover:bg-white/10 transition duration-500">
+
+          <div className="w-14 h-14 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-5 text-blue-400 text-2xl">
+
+            🚁
+
+          </div>
+
+          <h1 className="text-2xl font-bold mb-3">
+            Drone Mapping
+          </h1>
+
+          <p className="text-slate-400 leading-relaxed">
+            Pemetaan wilayah lebih cepat dan efisien menggunakan UAV Drone
+            berbasis orthophoto dan topografi digital.
+          </p>
+
+        </div>
+
+        {/* CARD 3 */}
+        <div className="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl hover:bg-white/10 transition duration-500">
+
+          <div className="w-14 h-14 rounded-2xl bg-green-500/20 flex items-center justify-center mb-5 text-green-400 text-2xl">
+
+            🛰️
+
+          </div>
+
+          <h1 className="text-2xl font-bold mb-3">
+            GIS Integration
+          </h1>
+
+          <p className="text-slate-400 leading-relaxed">
+            Seluruh data spasial terintegrasi dalam sistem digital berbasis
+            GIS yang mudah diakses dan divisualisasikan.
+          </p>
+
+        </div>
+
+        {/* CARD 4 */}
+        <div className="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl hover:bg-white/10 transition duration-500">
+
+          <div className="w-14 h-14 rounded-2xl bg-orange-500/20 flex items-center justify-center mb-5 text-orange-400 text-2xl">
+
+            📍
+
+          </div>
+
+          <h1 className="text-2xl font-bold mb-3">
+            Smart Survey
+          </h1>
+
+          <p className="text-slate-400 leading-relaxed">
+            Sistem survey modern yang mendukung efisiensi lapangan dan
+            pengolahan data digital secara profesional.
+          </p>
+
+        </div>
 
       </div>
 
