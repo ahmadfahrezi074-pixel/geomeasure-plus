@@ -80,7 +80,7 @@ export default function Home() {
       <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-[45px] blur-2xl opacity-60 group-hover:opacity-100 transition duration-700"></div>
 
       <img
-        src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5ce?q=80&w=2070&auto=format&fit=crop"
+        src="https://images.unsplash.com/photo-1628158088803-4200c2be52f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3VydmV5b3J8ZW58MHx8MHx8fDA%3D"
         alt="GeoMeasure"
         className="relative rounded-[40px] shadow-2xl object-cover h-[650px] w-full hover:scale-[1.02] transition duration-700"
       />
