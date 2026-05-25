@@ -1,17 +1,17 @@
 {/* CARD */}
-<div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+<div className="max-w-7xl mx-auto columns-1 lg:columns-3 gap-10 space-y-10">
 
   {layanan.map((item, index) => (
 
     <div
       key={index}
-      className="relative bg-white/5 border border-white/10 rounded-[40px] overflow-hidden backdrop-blur-2xl shadow-2xl transition-all duration-700 ease-in-out hover:scale-[1.02] hover:border-cyan-400/30 hover:shadow-cyan-500/10 h-fit"
+      className="relative mb-10 break-inside-avoid bg-white/5 border border-white/10 rounded-[40px] overflow-hidden backdrop-blur-2xl shadow-2xl transition-all duration-700 ease-in-out hover:scale-[1.02] hover:border-cyan-400/30 hover:shadow-cyan-500/10"
     >
 
       {/* GLOW */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 pointer-events-none"></div>
 
-      {/* TOP */}
+      {/* HEADER */}
       <div className={`relative bg-gradient-to-r ${item.color} p-8`}>
 
         {/* ICON */}
@@ -23,15 +23,19 @@
 
         {/* TITLE */}
         <h1 className="text-3xl md:text-4xl font-black leading-tight mb-4">
+
           {item.title}
+
         </h1>
 
         {/* SUBTITLE */}
         <p className="text-white/80 text-lg mb-8 leading-relaxed">
+
           {item.subtitle}
+
         </p>
 
-        {/* HARGA */}
+        {/* PRICE */}
         <div className="inline-block bg-black/20 backdrop-blur-xl border border-white/10 px-6 py-4 rounded-2xl">
 
           <p className="text-sm uppercase tracking-[3px] text-white/70 mb-2">
@@ -49,9 +53,11 @@
       {/* CONTENT */}
       <div className="relative p-8">
 
-        {/* DESC */}
+        {/* DESCRIPTION */}
         <p className="text-slate-300 leading-relaxed text-lg mb-10">
+
           {item.desc}
+
         </p>
 
         {/* BUTTON */}
@@ -81,7 +87,7 @@
 
         {/* DETAIL */}
         <div
-          className={`transition-all duration-700 ease-in-out overflow-hidden
+          className={`overflow-hidden transition-all duration-700 ease-in-out
 
           ${openIndex === index
               ? "max-h-[2500px] opacity-100 mt-10"
@@ -105,7 +111,9 @@
                   key={i}
                   className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-slate-300 hover:bg-white/10 transition"
                 >
+
                   • {spec}
+
                 </div>
 
               ))}
@@ -144,7 +152,7 @@
 
           </div>
 
-          {/* HARGA */}
+          {/* DETAIL HARGA */}
           <div>
 
             <h2 className="text-cyan-400 font-bold text-2xl mb-5">
@@ -159,7 +167,9 @@
                   key={i}
                   className="bg-cyan-500/10 border border-cyan-400/20 rounded-2xl px-5 py-4 text-slate-200 hover:bg-cyan-500/20 transition"
                 >
+
                   • {harga}
+
                 </div>
 
               ))}
