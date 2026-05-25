@@ -11,6 +11,8 @@ export default function Layanan() {
 
   const [openIndex, setOpenIndex] = useState(null);
 
+  const [luasTanah, setLuasTanah] = useState({});
+
   const layanan = [
 
     {
@@ -22,30 +24,34 @@ export default function Layanan() {
 
       color: "from-cyan-500 to-blue-700",
 
-      harga: "Mulai Rp250.000",
+      hargaAwal: 250000,
 
       desc:
-        "Layanan pengukuran dan pemetaan kolektif berbasis teknologi GNSS Geodetic dan Drone RTK untuk membantu masyarakat desa memperoleh legalitas bidang tanah secara lebih cepat, akurat, transparan, dan terjangkau.",
+        "Layanan pengukuran dan pemetaan kolektif berbasis GNSS Geodetic dan Drone RTK untuk membantu masyarakat memperoleh legalitas bidang tanah secara lebih cepat, akurat, transparan, dan terjangkau.",
+
+      persyaratan: [
+        "Fotokopi KTP",
+        "Surat Kepemilikan Tanah",
+        "Titik Lokasi Tanah",
+        "Batas Bidang Tanah Jelas",
+      ],
 
       spesifikasi: [
         "Pengukuran GNSS Geodetic",
-        "Pemetaan Drone RTK",
+        "Drone Mapping RTK",
         "Peta Bidang Tanah",
-        "Database WebGIS Desa",
-        "Validasi Data Lapangan",
+        "Database GIS",
+        "Validasi Lapangan",
       ],
 
       target:
-        "Masyarakat Desa, Program Sosial Pertanahan, Pemerintah Desa",
+        "Masyarakat Desa dan Program Sosial Pertanahan",
 
       output:
-        "Shapefile (.shp), PDF Peta, Data Koordinat, Database GIS",
+        "PDF Peta, SHP, Data Koordinat, Arsip Digital",
 
-      hargaDetail: [
-        "0 - 2 Ha : Rp250.000",
-        "Tambahan >2 Ha : Rp30.000 / Ha",
-        "Survey Pelosok : GRATIS",
-      ],
+      simulasi:
+        "Rp250.000 untuk 2 Ha pertama + Rp30.000/Ha berikutnya",
     },
 
     {
@@ -57,30 +63,34 @@ export default function Layanan() {
 
       color: "from-green-500 to-emerald-700",
 
-      harga: "Mulai Rp385.000",
+      hargaAwal: 385000,
 
       desc:
-        "Layanan digitalisasi dan rekonstruksi data spasial lama menggunakan analisis SIG dan tracking bidang tanah agar data pertanahan menjadi lebih presisi dan modern.",
+        "Layanan digitalisasi dan rekonstruksi data spasial lama menggunakan SIG agar data pertanahan menjadi lebih modern dan presisi.",
+
+      persyaratan: [
+        "Surat Ukur Lama",
+        "Fotokopi KTP",
+        "Data Lokasi Bidang",
+        "Dokumen Pendukung",
+      ],
 
       spesifikasi: [
-        "Tracking Bidang Lama",
-        "Digitalisasi Peta Analog",
+        "Tracking Bidang",
+        "Digitalisasi Peta",
         "Integrasi SIG",
-        "Koreksi Posisi Bidang",
-        "Analisis Overlay Spasial",
+        "Overlay Spasial",
+        "Koreksi Posisi",
       ],
 
       target:
-        "Pemilik Tanah Lama, Pemerintah Desa, Rekonstruksi Arsip BPN",
+        "Pemilik Tanah Lama dan Rekonstruksi Arsip",
 
       output:
-        "Peta Rekonstruksi, File GIS, Validasi Koordinat, Arsip Digital",
+        "Peta Rekonstruksi, File GIS, Validasi Koordinat",
 
-      hargaDetail: [
-        "2 Ha pertama : Rp250.000",
-        "Kelebihan 4,5 Ha : Rp135.000",
-        "Digitalisasi Arsip : Include",
-      ],
+      simulasi:
+        "2 Ha pertama Rp250.000 + kelebihan 4,5 Ha Rp135.000",
     },
 
     {
@@ -92,30 +102,34 @@ export default function Layanan() {
 
       color: "from-orange-500 to-red-700",
 
-      harga: "Mulai Rp44.500.000",
+      hargaAwal: 44500000,
 
       desc:
-        "Layanan pemetaan skala besar menggunakan Drone Mapping, Orthophoto HD, DEM, dan analisis topografi digital untuk kebutuhan audit konsesi dan proyek korporasi.",
+        "Layanan pemetaan skala besar menggunakan Drone Mapping dan Orthophoto HD untuk audit konsesi dan proyek korporasi.",
+
+      persyaratan: [
+        "Legalitas Perusahaan",
+        "Data Lokasi HGU",
+        "Koordinat Awal",
+        "Dokumen Perizinan",
+      ],
 
       spesifikasi: [
         "Drone Mapping",
         "Orthophoto HD",
         "DEM & Kontur",
-        "Audit Konsesi",
         "Analisis Topografi",
+        "Audit Konsesi",
       ],
 
       target:
-        "Perusahaan Sawit, Developer, BUMN, Konsesi HGU",
+        "Perusahaan Sawit, Developer, BUMN",
 
       output:
-        "Orthophoto HD, DEM, Kontur, Peta Konsesi, Data GIS",
+        "Orthophoto HD, DEM, Kontur, Data GIS",
 
-      hargaDetail: [
-        "Biaya Admin : Rp1.500.000",
-        "Jasa Teknis : Rp150.000 - Rp300.000 / Ha",
-        "Output GIS Premium : Include",
-      ],
+      simulasi:
+        "Rp150.000 - Rp300.000 / Ha + biaya administrasi",
     },
 
   ];
@@ -179,7 +193,7 @@ export default function Layanan() {
                 </p>
 
                 <h1 className="text-4xl font-black">
-                  {item.harga}
+                  Rp {item.hargaAwal.toLocaleString("id-ID")}
                 </h1>
 
               </div>
@@ -223,11 +237,37 @@ export default function Layanan() {
                 className={`overflow-hidden transition-all duration-700 ease-in-out
 
                 ${openIndex === index
-                    ? "max-h-[2500px] opacity-100 mt-10"
+                    ? "max-h-[4000px] opacity-100 mt-10"
                     : "max-h-0 opacity-0"
                   }
                 `}
               >
+
+                {/* PERSYARATAN */}
+                <div className="mb-10">
+
+                  <h2 className="text-cyan-400 text-2xl font-bold mb-5">
+                    Persyaratan
+                  </h2>
+
+                  <div className="space-y-4">
+
+                    {item.persyaratan.map((syarat, i) => (
+
+                      <div
+                        key={i}
+                        className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-slate-300"
+                      >
+
+                        • {syarat}
+
+                      </div>
+
+                    ))}
+
+                  </div>
+
+                </div>
 
                 {/* SPESIFIKASI */}
                 <div className="mb-10">
@@ -285,27 +325,50 @@ export default function Layanan() {
 
                 </div>
 
-                {/* HARGA */}
-                <div>
+                {/* SIMULASI HARGA */}
+                <div className="mb-10">
 
                   <h2 className="text-cyan-400 text-2xl font-bold mb-5">
-                    Detail Harga
+                    Simulasi Harga
                   </h2>
 
-                  <div className="space-y-4">
+                  <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
 
-                    {item.hargaDetail.map((harga, i) => (
+                    <input
+                      type="number"
+                      placeholder="Masukkan luas tanah (Ha)"
+                      value={luasTanah[index] || ""}
+                      onChange={(e) =>
+                        setLuasTanah({
+                          ...luasTanah,
+                          [index]: e.target.value,
+                        })
+                      }
+                      className="w-full bg-slate-900 border border-white/10 rounded-2xl px-5 py-4 text-white outline-none mb-6"
+                    />
 
-                      <div
-                        key={i}
-                        className="bg-cyan-500/10 border border-cyan-400/20 rounded-2xl px-5 py-4 text-slate-200"
-                      >
+                    <div className="bg-cyan-500/10 border border-cyan-400/20 rounded-2xl p-5">
 
-                        • {harga}
+                      <p className="text-slate-300 mb-2">
+                        Estimasi Harga
+                      </p>
 
-                      </div>
+                      <h1 className="text-4xl font-black text-cyan-400">
 
-                    ))}
+                        Rp{" "}
+
+                        {(
+                          item.hargaAwal *
+                          (Number(luasTanah[index]) || 1)
+                        ).toLocaleString("id-ID")}
+
+                      </h1>
+
+                    </div>
+
+                    <p className="text-slate-500 text-sm mt-4">
+                      {item.simulasi}
+                    </p>
 
                   </div>
 
@@ -324,5 +387,5 @@ export default function Layanan() {
     </div>
 
   );
-
+ 
 }
