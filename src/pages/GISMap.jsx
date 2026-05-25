@@ -40,7 +40,7 @@ export default function GISMap() {
         <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl overflow-hidden mb-20">
 
           <iframe
-            src="https://www.openstreetmap.org/export/embed.html?bbox=103.8000%2C-2.9500%2C104.0000%2C-2.7000&layer=mapnik&marker=-2.8050%2C103.8500"
+            src="https://derisiw.github.io/Peta-Zonasi-Wilayah-Pengukuran-GeoMeasure-/"
             className="w-full h-[600px]"
             loading="lazy"
           ></iframe>

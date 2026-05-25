@@ -36,10 +36,21 @@ export default function Layanan() {
         "Asistensi teknis kolektif tingkat desa untuk memetakan batas bidang tanah dari nol secara menyeluruh guna menyiapkan dokumen pra-pendaftaran tanah massal bebas sengketa.",
 
       persyaratan: [
-        "Fotokopi KTP & KK",
-        "Surat Alas Hak / Sporadik",
-        "Surat Persetujuan Batas",
-        "Patok batas sementara",
+
+        "Fotokopi KTP dan Kartu Keluarga (KK) pemohon sebanyak 2 rangkap",
+
+        "Fotokopi dokumen alas hak tanah seperti Sporadik Desa, Surat Hibah, Surat Jual Beli, Girik, atau dokumen kepemilikan lain yang sah",
+
+        "Lembar Surat Pernyataan Persetujuan Batas Sempadan yang telah ditandatangani oleh para pemilik tanah berbatasan langsung",
+
+        "Pemasangan patok batas sementara atau permanen pada titik sudut bidang tanah sebelum jadwal survey dilakukan",
+
+        "Khusus kategori GeoDesa Bersubsidi wajib melampirkan Surat Keterangan Tidak Mampu (SKTM) asli dari Kepala Desa atau bukti aktif DTKS Kementerian Sosial seperti KKS/KIP demi mencegah salah sasaran kuota bantuan",
+
+        "Kewajiban membersihkan jalur batas lahan dari semak belukar agar pengambilan data GNSS lebih optimal",
+
+        "Bukti pelunasan SPPT PBB-P2 tahun berjalan untuk kategori reguler/mandiri",
+
       ],
 
       spesifikasi: [
@@ -73,11 +84,19 @@ export default function Layanan() {
         "Pelacakan posisi fisik dan pengukuran ulang berbasis GNSS Geodetic terhadap Surat Ukur (SU) atau Gambar Situasi (GS) lama yang belum terplotting digital.",
 
       persyaratan: [
-        "Fotokopi KTP",
-        "Sertifikat lama",
-        "Gambar Situasi / SU Analog",
-        "SPPT PBB",
-        "Surat bebas sengketa",
+
+        "Fotokopi KTP pemilik sertifikat atau Surat Kuasa resmi apabila pengurusan diwakilkan",
+
+        "Fotokopi Sertifikat Hak Atas Tanah beserta dokumen Surat Ukur (SU) atau Gambar Situasi (GS) analog lama",
+
+        "Bukti lunas Pajak Bumi dan Bangunan (SPPT PBB-P2) tahun berjalan",
+
+        "Surat Pernyataan Penguasaan Fisik Tanah secara terus menerus dan bebas sengketa",
+
+        "Dokumentasi lokasi bidang tanah terkini untuk membantu proses rekonstruksi posisi bidang",
+
+        "Ketersediaan akses lokasi bagi tim survey GNSS dan verifikasi lapangan",
+
       ],
 
       spesifikasi: [
@@ -111,10 +130,21 @@ export default function Layanan() {
         "Pemetaan udara area konsesi skala luas untuk audit blok tanaman, DEM/Kontur, site plan logistik, dan pemetaan perimeter luar pra-ekspos Kanwil BPN.",
 
       persyaratan: [
-        "Akta Perusahaan",
-        "NIB & KKPR",
-        "Peta Konsesi Lama",
-        "Pendamping Internal Lapangan",
+
+        "Akta Pendirian Perusahaan dan SK Kemenkumham terbaru",
+
+        "Nomor Induk Berusaha (NIB) dan dokumen KKPR/Izin Lokasi",
+
+        "Peta konsesi lama, HGU, atau data spasial eksisting perusahaan",
+
+        "Surat penunjukan PIC atau tim pendamping lapangan internal perusahaan",
+
+        "Dokumen batas konsesi awal atau koordinat perimeter area kerja",
+
+        "Surat Perintah Kerja (SPK) atau dokumen kontrak kerja sama",
+
+        "Kesiapan akses mobilisasi lapangan dan area landing drone/UAV",
+
       ],
 
       spesifikasi: [
@@ -148,10 +178,21 @@ export default function Layanan() {
         "Audit fiskal PBB-P2 berbasis overlay drone udara dengan data pajak lama untuk mendeteksi objek anomali bangunan dan optimalisasi NJOP berbasis spasial.",
 
       persyaratan: [
-        "Surat Permohonan Resmi",
-        "SPK Pengadaan Jasa",
-        "Database DHKP .csv",
-        "NDA Data SISMIOP",
+
+        "Surat Permohonan Resmi atau Surat Tugas dari Pemerintah Daerah/Bapenda",
+
+        "Dokumen SPK Pengadaan Jasa atau kontrak kerja sama resmi",
+
+        "Database DHKP atau data objek pajak digital format .csv/.xls",
+
+        "Dokumen Non-Disclosure Agreement (NDA) kerahasiaan data SISMIOP",
+
+        "Peta administrasi wilayah desa/kelurahan dan data blok pajak eksisting",
+
+        "Penunjukan operator atau admin pendamping dari instansi pemerintah",
+
+        "Kesiapan akses data server, integrasi WebGIS, dan validasi lapangan",
+
       ],
 
       spesifikasi: [
@@ -178,7 +219,6 @@ export default function Layanan() {
 
       case "geoDesa":
 
-        // SUBSIDI
         if (kategori === "subsidi") {
 
           if (val <= 2) return 250000;
@@ -187,7 +227,6 @@ export default function Layanan() {
 
         }
 
-        // REGULER
         if (kategori === "reguler") {
 
           if (val <= 2) return 550000;
@@ -307,22 +346,6 @@ export default function Layanan() {
 
                 </p>
 
-                <div className="bg-black/20 border border-white/10 rounded-2xl px-5 py-4">
-
-                  <p className="text-sm uppercase tracking-[3px] text-white/70 mb-2">
-
-                    Target Layanan
-
-                  </p>
-
-                  <p className="text-lg font-semibold">
-
-                    {item.kategori}
-
-                  </p>
-
-                </div>
-
               </div>
 
               {/* CONTENT */}
@@ -334,7 +357,6 @@ export default function Layanan() {
 
                 </p>
 
-                {/* BUTTON */}
                 <button
                   onClick={() =>
                     setOpenIndex(
@@ -411,7 +433,7 @@ export default function Layanan() {
 
                             <div
                               key={i}
-                              className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-slate-300"
+                              className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-slate-300 leading-relaxed"
                             >
 
                               • {syarat}
@@ -553,27 +575,6 @@ export default function Layanan() {
                                 : "Estimasi: Rp 0"}
 
                             </h1>
-
-                          </div>
-
-                          {/* INFO */}
-                          <div className="mt-6 bg-white/5 border border-white/10 rounded-2xl p-5">
-
-                            <p className="text-slate-400 leading-relaxed text-sm">
-
-                              • GeoDesa Subsidi:
-                              Rp250.000 untuk 2 Ha pertama +
-                              Rp30.000/Ha berikutnya.
-
-                            </p>
-
-                            <p className="text-slate-400 leading-relaxed text-sm mt-3">
-
-                              • GeoDesa Reguler:
-                              Rp550.000 untuk 2 Ha pertama +
-                              Rp50.000/Ha berikutnya.
-
-                            </p>
 
                           </div>
 
