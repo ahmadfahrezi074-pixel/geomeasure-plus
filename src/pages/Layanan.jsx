@@ -13,6 +13,8 @@ export default function Layanan() {
 
   const [openIndex, setOpenIndex] = useState(null);
 
+  const [openSpec, setOpenSpec] = useState({});
+
   const [inputValue, setInputValue] = useState({});
 
   const [geoDesaType, setGeoDesaType] = useState({});
@@ -21,34 +23,23 @@ export default function Layanan() {
 
     {
       icon: <Landmark size={42} />,
-
-      title: "GeoDesa",
-
-      subtitle:
+     title: "GeoDesa",
+    subtitle:
         "Pemetaan dan pengukuran tanah desa berbasis teknologi geospasial modern.",
-
-      color: "from-cyan-500 to-blue-700",
-
-      kategori:
+    color: "from-cyan-500 to-blue-700",
+    kategori:
         "Masyarakat Bersubsidi & Reguler",
 
       desc:
         "GeoDesa membantu masyarakat memperoleh data bidang tanah yang akurat, tertata, dan siap digunakan untuk administrasi pertanahan maupun pengembangan wilayah desa berbasis digital.",
 
       persyaratan: [
-
-        "Fotokopi KTP dan KK pemohon",
-
-        "Dokumen alas hak tanah seperti Sporadik, Surat Hibah, Girik, atau Surat Jual Beli",
-
-        "Surat persetujuan batas sempadan dari pemilik tanah sekitar",
-
-        "Patok batas lahan telah terpasang sebelum survey",
-
-        "Khusus kategori subsidi wajib melampirkan SKTM atau bukti DTKS/KKS/KIP",
-
-        "SPPT PBB tahun berjalan untuk kategori reguler",
-
+      "Fotokopi KTP dan KK pemohon",
+        "Dokumen alas hak tanah",
+        "Surat persetujuan batas sempadan",
+        "Patok batas telah terpasang",
+        "SKTM/DTKS untuk kategori subsidi",
+        "SPPT PBB untuk kategori reguler",
       ],
 
       spesifikasi: [
@@ -60,39 +51,51 @@ export default function Layanan() {
       ],
 
       output:
-        "Peta bidang tanah, shapefile, gambar ukur, dan arsip data digital.",
+        "Peta bidang tanah, shapefile, gambar ukur, dan arsip digital.",
 
       calculatorType: "geoDesa",
+
+      workflow: [
+        {
+          icon: "📝",
+          title: "Registrasi",
+          desc: "Pengguna melakukan pendaftaran layanan dan upload dokumen persyaratan.",
+        },
+        {
+          icon: "🛰️",
+          title: "Survey",
+          desc: "Tim melakukan pengukuran menggunakan GNSS dan drone mapping.",
+        },
+        {
+          icon: "💻",
+          title: "Pengolahan",
+          desc: "Data diproses menggunakan GIS dan sistem WebGIS digital.",
+        },
+        {
+          icon: "📦",
+          title: "Output",
+          desc: "Pengguna menerima peta digital dan data spasial siap pakai.",
+        },
+      ],
     },
 
     {
       icon: <Map size={42} />,
-
-      title: "GeoTrace",
-
-      subtitle:
+    title: "GeoTrace",
+     subtitle:
         "Pelacakan dan rekonstruksi bidang tanah lama berbasis koordinat modern.",
-
-      color: "from-green-500 to-emerald-700",
-
-      kategori:
+    color: "from-green-500 to-emerald-700",
+    kategori:
         "Pemilik Sertifikat Lama & Umum",
 
       desc:
-        "GeoTrace digunakan untuk membantu menemukan kembali posisi bidang tanah lama melalui rekonstruksi koordinat berbasis GNSS dan sistem informasi geografis.",
+        "GeoTrace membantu menemukan kembali posisi bidang tanah lama melalui rekonstruksi koordinat berbasis GNSS dan GIS.",
 
       persyaratan: [
-
-        "Fotokopi KTP pemilik",
-
-        "Sertifikat tanah, SU, atau GS lama",
-
-        "SPPT PBB tahun berjalan",
-
-        "Surat penguasaan fisik tanah",
-
-        "Dokumentasi lokasi bidang tanah",
-
+        "Fotokopi KTP",
+        "Sertifikat/SU/GS lama",
+        "SPPT PBB",
+        "Dokumen penguasaan tanah",
       ],
 
       spesifikasi: [
@@ -100,101 +103,145 @@ export default function Layanan() {
         "Digitalisasi Peta",
         "Overlay GIS",
         "SIG Integration",
-        "Validasi Posisi",
-      ],
+     ],
 
       output:
         "Peta rekonstruksi bidang tanah dan data koordinat digital.",
 
       calculatorType: "geoTrace",
+
+      workflow: [
+        {
+          icon: "📄",
+          title: "Validasi Arsip",
+          desc: "Dokumen lama diverifikasi dan dipindai secara digital.",
+        },
+        {
+          icon: "📍",
+          title: "Tracking",
+          desc: "Posisi bidang dilacak menggunakan GNSS modern.",
+        },
+        {
+          icon: "🗺️",
+          title: "Overlay GIS",
+          desc: "Data analog diintegrasikan ke sistem GIS digital.",
+        },
+        {
+          icon: "✅",
+          title: "Hasil",
+          desc: "Pengguna menerima peta rekonstruksi dan file digital.",
+        },
+      ],
     },
 
     {
       icon: <Building2 size={42} />,
-
-      title: "GeoCorp",
-
-      subtitle:
+     title: "GeoCorp",
+     subtitle:
         "Pemetaan kawasan dan monitoring spasial perusahaan berbasis drone.",
-
-      color: "from-orange-500 to-red-700",
-
-      kategori:
+    color: "from-orange-500 to-red-700",
+    kategori:
         "Perusahaan, Developer, dan Swasta",
 
       desc:
-        "GeoCorp menyediakan layanan pemetaan udara, monitoring kawasan, DEM, kontur, dan dashboard spasial digital untuk kebutuhan perusahaan maupun industri.",
+        "GeoCorp menyediakan layanan pemetaan udara, DEM, kontur, monitoring kawasan, dan dashboard spasial perusahaan.",
 
       persyaratan: [
-
-        "Akta perusahaan dan NIB",
-
-        "Data kawasan atau peta konsesi",
-
-        "Dokumen kerja sama/SPK",
-
-        "PIC pendamping lapangan",
-
-        "Akses area survey dan drone",
-
+      "Akta perusahaan dan NIB",
+        "Data kawasan/peta konsesi",
+        "SPK atau kerja sama",
+        "PIC lapangan",
       ],
 
       spesifikasi: [
         "Orthophoto HD",
         "DEM & Kontur",
         "Drone Mapping",
-        "Audit Kawasan",
-        "Dashboard WebGIS",
+      "Dashboard WebGIS",
       ],
 
       output:
-        "Orthophoto HD, DEM, peta kawasan, dan database GIS perusahaan.",
+        "Orthophoto HD, DEM, kontur, dan database GIS perusahaan.",
 
       calculatorType: "geoCorp",
+
+      workflow: [
+        {
+          icon: "🏢",
+          title: "Perencanaan",
+          desc: "Analisis area kerja dan kebutuhan pemetaan perusahaan.",
+        },
+        {
+          icon: "🚁",
+          title: "Akuisisi Data",
+          desc: "Drone melakukan pemetaan udara kawasan.",
+        },
+        {
+          icon: "📊",
+          title: "Processing",
+          desc: "Data diproses menjadi orthophoto dan DEM.",
+        },
+        {
+          icon: "🌐",
+          title: "Monitoring",
+          desc: "Data ditampilkan pada dashboard WebGIS perusahaan.",
+        },
+      ],
     },
 
     {
       icon: <ShieldCheck size={42} />,
-
-      title: "GeoGov",
-
-      subtitle:
+    title: "GeoGov",
+    subtitle:
         "Visualisasi pajak dan informasi tanah berbasis data spasial.",
-
-      color: "from-violet-500 to-purple-700",
-
-      kategori:
+     color: "from-violet-500 to-purple-700",
+    kategori:
         "Pemerintah Daerah & Publik",
 
       desc:
-        "Layanan integrasi data spasial dan visualisasi objek pajak berbasis WebGIS untuk membantu pengecekan informasi tanah, estimasi tarif pajak, visualisasi bidang tanah, serta monitoring data spasial secara digital dan real-time.",
+        "GeoGov menghadirkan visualisasi objek pajak dan informasi tanah berbasis WebGIS untuk monitoring dan pengecekan data spasial secara digital.",
 
       persyaratan: [
-
-        "Surat permohonan layanan",
-
-        "Database objek pajak (.csv/.xls)",
-
-        "Peta administrasi wilayah",
-
-        "Dokumen kerja sama layanan",
-
-        "Operator/admin pendamping",
-
+      "Surat permohonan layanan",
+      "Database objek pajak",
+      "Peta administrasi wilayah",
+      "Operator/admin pendamping",
       ],
 
       spesifikasi: [
         "Visualisasi Pajak",
         "Dashboard WebGIS",
         "Peta Interaktif",
-        "Integrasi Data Spasial",
-        "Monitoring Digital",
+      "Monitoring Digital",
       ],
 
       output:
-        "Dashboard pajak digital, visualisasi bidang tanah, dan data spasial interaktif.",
+        "Dashboard pajak digital dan visualisasi bidang tanah interaktif.",
 
       calculatorType: "geoGov",
+
+      workflow: [
+        {
+          icon: "📥",
+          title: "Import Data",
+          desc: "Database objek pajak dimasukkan ke sistem.",
+        },
+        {
+          icon: "🛰️",
+          title: "Validasi Spasial",
+          desc: "Data diverifikasi dengan citra dan peta digital.",
+        },
+        {
+          icon: "🌐",
+          title: "Integrasi WebGIS",
+          desc: "Data divisualisasikan pada dashboard interaktif.",
+        },
+        {
+          icon: "📈",
+          title: "Monitoring",
+          desc: "Monitoring pajak dan tanah dilakukan secara real-time.",
+        },
+      ],
     },
 
   ];
@@ -249,7 +296,7 @@ export default function Layanan() {
 
     <div className="min-h-screen bg-slate-950 text-white px-6 md:px-14 py-28">
 
-      {/* HEADER */}
+
       <div className="max-w-7xl mx-auto text-center mb-20">
 
         <p className="text-cyan-400 uppercase tracking-[6px] font-semibold mb-4">
@@ -261,9 +308,9 @@ export default function Layanan() {
           Katalog Layanan
           <br />
 
-        <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             GeoMeasure+
-        </span>
+          </span>
 
         </h1>
 
@@ -273,7 +320,7 @@ export default function Layanan() {
 
       </div>
 
-      {/* GRID */}
+
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
 
         {layanan.map((item, index) => (
@@ -291,9 +338,8 @@ export default function Layanan() {
             shadow-2xl
             transition-all
             duration-700
-            hover:border-cyan-400/30
-            hover:-translate-y-2
 
+            
             ${openIndex === index ? "md:col-span-2" : ""}
 
             `}
@@ -302,23 +348,23 @@ export default function Layanan() {
             {/* HEADER */}
             <div className={`bg-gradient-to-r ${item.color} p-8`}>
 
-              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+              <div className="flex justify-between items-start gap-6 flex-wrap">
 
-                <div className="flex items-start gap-5">
+                <div className="flex gap-5">
 
-                  <div className="w-20 h-20 rounded-3xl bg-white/10 flex items-center justify-center shrink-0">
+                  <div className="w-20 h-20 rounded-3xl bg-white/10 flex items-center justify-center">
                     {item.icon}
-                </div>
+                  </div>
 
                   <div>
 
                     <h1 className="text-4xl font-black mb-3">
                       {item.title}
-                   </h1>
+                    </h1>
 
-                    <p className="text-white/90 text-lg leading-relaxed mb-4 max-w-2xl">
+                    <p className="text-white/90 text-lg mb-4 max-w-2xl">
                       {item.subtitle}
-                  </p>
+                    </p>
 
                     <div className="bg-black/20 border border-white/10 rounded-2xl px-4 py-3 inline-block">
 
@@ -328,7 +374,7 @@ export default function Layanan() {
 
                       <p className="font-semibold">
                         {item.kategori}
-                     </p>
+                      </p>
 
                     </div>
 
@@ -338,9 +384,7 @@ export default function Layanan() {
 
                 <button
                   onClick={() =>
-                    setOpenIndex(
-                      openIndex === index ? null : index
-                    )
+                    setOpenIndex(openIndex === index ? null : index)
                   }
                   className={`
 
@@ -352,11 +396,11 @@ export default function Layanan() {
                   items-center
                   gap-3
                   transition-all
-                  duration-300
 
+                
                   ${openIndex === index
-                      ? "bg-red-500 hover:bg-red-400"
-                      : "bg-cyan-500 hover:bg-cyan-400"
+                      ? "bg-red-500"
+                      : "bg-cyan-500"
                     }
 
                   `}
@@ -384,12 +428,9 @@ export default function Layanan() {
               overflow-hidden
               transition-all
               duration-700
-              ease-in-out
-
-              ${openIndex === index
+             ${openIndex === index
                   ? "max-h-[5000px] opacity-100"
-                  : "max-h-0 opacity-0"
-                }
+                  : "max-h-0 opacity-0"}
 
               `}
             >
@@ -398,14 +439,13 @@ export default function Layanan() {
 
                 <div className="bg-white/5 border border-white/10 rounded-3xl p-6 mb-8">
 
-                  <p className="text-slate-300 leading-relaxed text-lg">
+                  <p className="text-slate-300 text-lg leading-relaxed">
                     {item.desc}
-               </p>
+                  </p>
 
                 </div>
 
-                {/* LANDSCAPE */}
-                <div className="grid xl:grid-cols-3 gap-6">
+               <div className="grid xl:grid-cols-3 gap-6">
 
                   {/* PERSYARATAN */}
                   <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
@@ -436,38 +476,74 @@ export default function Layanan() {
                   {/* SPESIFIKASI */}
                   <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
 
-                    <h2 className="text-cyan-400 text-2xl font-bold mb-5">
-                      Spesifikasi
-                    </h2>
+                    <button
+                      onClick={() =>
+                        setOpenSpec({
+                          ...openSpec,
+                          [index]: !openSpec[index],
+                        })
+                      }
+                      className="w-full flex items-center justify-between bg-cyan-500/10 border border-cyan-400/20 rounded-2xl px-5 py-4"
+                    >
 
-                    <div className="space-y-3 mb-5">
+                      <div>
 
-                      {item.spesifikasi.map((spec, i) => (
+                        <h2 className="text-cyan-400 text-xl font-black text-left">
+                          Spesifikasi Teknis
+                        </h2>
 
-                        <div
-                          key={i}
-                          className="bg-slate-900/60 rounded-2xl px-4 py-3 text-sm text-slate-300"
-                        >
+                        <p className="text-slate-400 text-sm text-left mt-1">
+                          Klik untuk melihat detail teknologi
+                        </p>
 
-                          • {spec}
+                      </div>
 
-                        </div>
+                      {openSpec[index]
+                        ? <ChevronUp className="text-cyan-400" />
+                        : <ChevronDown className="text-cyan-400" />
+                      }
 
-                      ))}
+                    </button>
 
-                    </div>
+                    <div
+                      className={`
 
-                    <div className="bg-slate-900/60 rounded-2xl p-4">
+                      overflow-hidden
+                      transition-all
+                      duration-700
 
-                      <h3 className="text-cyan-400 font-bold mb-3">
-                        Output
-                      </h3>
+                      ${openSpec[index]
+                          ? "max-h-[2000px] opacity-100 mt-5"
+                          : "max-h-0 opacity-0"}
 
-                      <p className="text-slate-300 text-sm leading-relaxed">
-                        {item.output}
-                      </p>
+                      `}
+                    >
 
-                    </div>
+                      <div className="space-y-4">
+
+                        {item.spesifikasi.map((spec, i) => (
+
+                          <div
+                            key={i}
+                            className="bg-slate-900/60 rounded-2xl p-4"
+                          >
+
+                            <h3 className="font-bold text-white mb-2">
+                              {spec}
+                            </h3>
+
+                            <p className="text-slate-400 text-sm leading-relaxed">
+                              Teknologi modern berbasis sistem geospasial digital
+                              untuk mendukung proses pengukuran dan pemetaan.
+                            </p>
+
+                          </div>
+
+                        ))}
+
+                      </div>
+
+                   </div>
 
                   </div>
 
@@ -542,7 +618,43 @@ export default function Layanan() {
 
                       </h1>
 
+                    </div>
+
+                  </div>
+
                 </div>
+
+                {/* WORKFLOW */}
+                <div className="mt-10">
+
+                  <h2 className="text-3xl font-black text-cyan-400 mb-8">
+                    Skema Pelaksanaan
+                  </h2>
+
+                  <div className="grid lg:grid-cols-4 gap-5">
+
+                    {item.workflow.map((step, i) => (
+
+                      <div
+                        key={i}
+                        className="bg-white/5 border border-white/10 rounded-3xl p-6"
+                      >
+
+                        <div className="text-5xl mb-5">
+                          {step.icon}
+                        </div>
+
+                        <h3 className="text-xl font-black text-white mb-3">
+                          {step.title}
+                        </h3>
+
+                        <p className="text-slate-400 text-sm leading-relaxed">
+                          {step.desc}
+                        </p>
+
+                      </div>
+
+                    ))}
 
                   </div>
 
