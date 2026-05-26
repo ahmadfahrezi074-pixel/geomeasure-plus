@@ -20,12 +20,12 @@ export default function Layanan() {
   const layanan = [
 
     {
-      icon: <Landmark size={38} />,
+      icon: <Landmark size={42} />,
 
       title: "GeoDesa",
 
       subtitle:
-        "Pemetaan kolektif desa dan pengukuran bidang tanah berbasis geospasial modern.",
+        "Pemetaan dan pengukuran tanah desa berbasis teknologi geospasial modern.",
 
       color: "from-cyan-500 to-blue-700",
 
@@ -33,49 +33,45 @@ export default function Layanan() {
         "Masyarakat Bersubsidi & Reguler",
 
       desc:
-        "GeoDesa membantu masyarakat dalam pengukuran dan pemetaan bidang tanah secara digital menggunakan GNSS Geodetic, drone mapping, dan WebGIS desa agar administrasi pertanahan menjadi lebih tertata, modern, dan mudah diakses.",
+        "GeoDesa membantu masyarakat memperoleh data bidang tanah yang akurat, tertata, dan siap digunakan untuk administrasi pertanahan maupun pengembangan wilayah desa berbasis digital.",
 
       persyaratan: [
 
-        "Fotokopi KTP & KK pemohon",
+        "Fotokopi KTP dan KK pemohon",
 
-        "Dokumen alas hak tanah (Sporadik / Hibah / Surat Jual Beli)",
+        "Dokumen alas hak tanah seperti Sporadik, Surat Hibah, Girik, atau Surat Jual Beli",
 
-        "Surat persetujuan batas sempadan tetangga",
+        "Surat persetujuan batas sempadan dari pemilik tanah sekitar",
 
-        "Patok batas lahan telah dipasang",
+        "Patok batas lahan telah terpasang sebelum survey",
 
-        "SKTM / DTKS / KKS / KIP khusus kategori subsidi",
+        "Khusus kategori subsidi wajib melampirkan SKTM atau bukti DTKS/KKS/KIP",
 
-        "SPPT PBB tahun berjalan untuk reguler",
+        "SPPT PBB tahun berjalan untuk kategori reguler",
 
       ],
 
       spesifikasi: [
-
-        "Pengukuran GNSS Geodetic presisi tinggi",
-
-        "Pemetaan drone RTK resolusi tinggi",
-
-        "Peta bidang digital TM-3°",
-
-        "Integrasi WebGIS Desa",
-
+        "GNSS Geodetic",
+        "Drone RTK Mapping",
+        "Shapefile TM-3°",
+        "WebGIS Desa",
+        "Peta Digital",
       ],
 
       output:
-        "Peta digital, shapefile (.shp), gambar ukur indikatif, dan arsip data spasial.",
+        "Peta bidang tanah, shapefile, gambar ukur, dan arsip data digital.",
 
       calculatorType: "geoDesa",
     },
 
     {
-      icon: <Map size={38} />,
+      icon: <Map size={42} />,
 
       title: "GeoTrace",
 
       subtitle:
-        "Rekonstruksi bidang tanah dan pelacakan koordinat secara digital.",
+        "Pelacakan dan rekonstruksi bidang tanah lama berbasis koordinat modern.",
 
       color: "from-green-500 to-emerald-700",
 
@@ -83,132 +79,120 @@ export default function Layanan() {
         "Pemilik Sertifikat Lama & Umum",
 
       desc:
-        "GeoTrace digunakan untuk membantu menemukan kembali posisi bidang tanah lama berdasarkan surat ukur, gambar situasi, maupun data analog menggunakan teknologi GNSS dan GIS modern.",
+        "GeoTrace digunakan untuk membantu menemukan kembali posisi bidang tanah lama melalui rekonstruksi koordinat berbasis GNSS dan sistem informasi geografis.",
 
       persyaratan: [
 
-        "Fotokopi KTP pemilik tanah",
+        "Fotokopi KTP pemilik",
 
-        "Fotokopi sertifikat / surat ukur lama",
+        "Sertifikat tanah, SU, atau GS lama",
 
         "SPPT PBB tahun berjalan",
 
         "Surat penguasaan fisik tanah",
 
-        "Akses lokasi untuk survey lapangan",
+        "Dokumentasi lokasi bidang tanah",
 
       ],
 
       spesifikasi: [
-
-        "Tracking koordinat bidang",
-
-        "Rekonstruksi peta analog",
-
-        "Overlay data spasial",
-
-        "Validasi koordinat GNSS",
-
+        "Tracking Koordinat",
+        "Digitalisasi Peta",
+        "Overlay GIS",
+        "SIG Integration",
+        "Validasi Posisi",
       ],
 
       output:
-        "Peta rekonstruksi digital, visualisasi batas bidang, dan file GIS koordinat.",
+        "Peta rekonstruksi bidang tanah dan data koordinat digital.",
 
       calculatorType: "geoTrace",
     },
 
     {
-      icon: <Building2 size={38} />,
+      icon: <Building2 size={42} />,
 
       title: "GeoCorp",
 
       subtitle:
-        "Pemetaan kawasan perusahaan dan industri berbasis drone dan GIS.",
+        "Pemetaan kawasan dan monitoring spasial perusahaan berbasis drone.",
 
       color: "from-orange-500 to-red-700",
 
       kategori:
-        "Perusahaan, Developer & Swasta",
+        "Perusahaan, Developer, dan Swasta",
 
       desc:
-        "GeoCorp menyediakan layanan pemetaan udara dan survey kawasan skala besar untuk kebutuhan perusahaan, perkebunan, developer, dan industri dengan sistem digital modern.",
+        "GeoCorp menyediakan layanan pemetaan udara, monitoring kawasan, DEM, kontur, dan dashboard spasial digital untuk kebutuhan perusahaan maupun industri.",
 
       persyaratan: [
 
-        "Akta perusahaan & NIB",
+        "Akta perusahaan dan NIB",
 
-        "Dokumen izin lokasi / KKPR",
+        "Data kawasan atau peta konsesi",
 
-        "Peta kawasan atau area kerja",
+        "Dokumen kerja sama/SPK",
 
         "PIC pendamping lapangan",
 
-        "Dokumen kerja sama / SPK",
+        "Akses area survey dan drone",
 
       ],
 
       spesifikasi: [
-
-        "Orthophoto resolusi tinggi",
-
-        "Drone mapping kawasan",
-
-        "DEM & kontur digital",
-
-        "Dashboard monitoring WebGIS",
-
+        "Orthophoto HD",
+        "DEM & Kontur",
+        "Drone Mapping",
+        "Audit Kawasan",
+        "Dashboard WebGIS",
       ],
 
       output:
-        "Orthophoto HD, DEM, peta kawasan digital, dan database GIS perusahaan.",
+        "Orthophoto HD, DEM, peta kawasan, dan database GIS perusahaan.",
 
       calculatorType: "geoCorp",
     },
 
     {
-      icon: <ShieldCheck size={38} />,
+      icon: <ShieldCheck size={42} />,
 
       title: "GeoGov",
 
       subtitle:
-        "Visualisasi pajak tanah dan integrasi data spasial digital.",
+        "Visualisasi pajak dan informasi tanah berbasis data spasial.",
 
       color: "from-violet-500 to-purple-700",
 
       kategori:
-        "Pemerintah Daerah & Masyarakat",
+        "Pemerintah Daerah & Publik",
 
       desc:
-        "GeoGov membantu visualisasi objek pajak, informasi nilai tanah, serta integrasi data spasial berbasis WebGIS untuk mempermudah pengecekan informasi pertanahan secara modern dan interaktif.",
+        "Layanan integrasi data spasial dan visualisasi objek pajak berbasis WebGIS untuk membantu pengecekan informasi tanah, estimasi tarif pajak, visualisasi bidang tanah, serta monitoring data spasial secara digital dan real-time.",
 
       persyaratan: [
 
-        "Surat permohonan resmi",
+        "Surat permohonan layanan",
 
         "Database objek pajak (.csv/.xls)",
 
         "Peta administrasi wilayah",
 
-        "Dokumen kerja sama digital",
+        "Dokumen kerja sama layanan",
 
-        "Operator pendamping sistem",
+        "Operator/admin pendamping",
 
       ],
 
       spesifikasi: [
-
-        "Visualisasi objek pajak digital",
-
-        "Dashboard WebGIS interaktif",
-
-        "Monitoring data spasial",
-
-        "Integrasi data pajak digital",
-
+        "Visualisasi Pajak",
+        "Dashboard WebGIS",
+        "Peta Interaktif",
+        "Integrasi Data Spasial",
+        "Monitoring Digital",
       ],
 
       output:
-        "Dashboard WebGIS, visualisasi pajak digital, dan laporan spasial interaktif.",
+        "Dashboard pajak digital, visualisasi bidang tanah, dan data spasial interaktif.",
 
       calculatorType: "geoGov",
     },
@@ -225,23 +209,17 @@ export default function Layanan() {
 
         if (kategori === "subsidi") {
 
-          if (val <= 2000) return 250000;
+          if (val <= 20000) return 250000;
 
-          return (
-            250000 +
-            Math.ceil((val - 2000) / 1000) * 30000
-          );
+          return 250000 + (((val - 20000) / 10000) * 30000);
 
         }
 
         if (kategori === "reguler") {
 
-          if (val <= 2000) return 550000;
+          if (val <= 20000) return 550000;
 
-          return (
-            550000 +
-            Math.ceil((val - 2000) / 1000) * 50000
-          );
+          return 550000 + (((val - 20000) / 10000) * 50000);
 
         }
 
@@ -249,15 +227,15 @@ export default function Layanan() {
 
       case "geoTrace":
 
-        return 385000 + Math.ceil(val / 1000) * 15000;
+        return 385000 + ((val / 10000) * 15000);
 
       case "geoCorp":
 
-        return 1500000 + Math.ceil(val / 1000) * 200000;
+        return 1500000 + ((val / 10000) * 200000);
 
       case "geoGov":
 
-        return val * 15000 + 5000000;
+        return (val * 15000) + 5000000;
 
       default:
 
@@ -269,100 +247,88 @@ export default function Layanan() {
 
   return (
 
-    <div className="min-h-screen bg-slate-950 text-white px-5 md:px-10 py-28 overflow-hidden">
+    <div className="min-h-screen bg-slate-950 text-white px-6 md:px-14 py-28">
 
       {/* HEADER */}
       <div className="max-w-7xl mx-auto text-center mb-20">
 
-        <p className="text-cyan-400 uppercase tracking-[5px] font-semibold mb-4">
-
-          GeoMeasure+ Services
-
+        <p className="text-cyan-400 uppercase tracking-[6px] font-semibold mb-4">
+          GeoMeasure+ Ecosystem
         </p>
 
-        <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+        <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
 
           Katalog Layanan
           <br />
 
-          <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-
+        <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             GeoMeasure+
-
-          </span>
+        </span>
 
         </h1>
 
         <p className="text-slate-400 text-lg max-w-4xl mx-auto leading-relaxed">
-
-          Solusi pengukuran, pemetaan, dan layanan geospasial digital modern
-          untuk masyarakat, perusahaan, dan pemerintah daerah.
-
+          Platform layanan pengukuran, pemetaan, dan visualisasi data spasial modern.
         </p>
 
       </div>
 
       {/* GRID */}
-      <div className="max-w-7xl mx-auto grid xl:grid-cols-2 gap-8">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
 
         {layanan.map((item, index) => (
 
           <div
             key={index}
-            className="
-              bg-white/[0.04]
-              border
-              border-white/10
-              rounded-[36px]
-              overflow-hidden
-              backdrop-blur-2xl
-              transition-all
-              duration-500
-              hover:border-cyan-400/30
-              hover:shadow-cyan-500/10
-            "
+            className={`
+
+            bg-white/5
+            border
+            border-white/10
+            rounded-[35px]
+            overflow-hidden
+            backdrop-blur-2xl
+            shadow-2xl
+            transition-all
+            duration-700
+            hover:border-cyan-400/30
+            hover:-translate-y-2
+
+            ${openIndex === index ? "md:col-span-2" : ""}
+
+            `}
           >
 
-            {/* TOP */}
-            <div className={`bg-gradient-to-r ${item.color} p-7`}>
+            {/* HEADER */}
+            <div className={`bg-gradient-to-r ${item.color} p-8`}>
 
-              <div className="flex items-start justify-between gap-5">
+              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
 
-                <div className="flex gap-5">
+                <div className="flex items-start gap-5">
 
-                  <div className="w-20 h-20 rounded-3xl bg-white/10 border border-white/10 flex items-center justify-center shrink-0">
-
+                  <div className="w-20 h-20 rounded-3xl bg-white/10 flex items-center justify-center shrink-0">
                     {item.icon}
-
-                  </div>
+                </div>
 
                   <div>
 
-                    <h1 className="text-3xl font-black mb-3">
-
+                    <h1 className="text-4xl font-black mb-3">
                       {item.title}
+                   </h1>
 
-                    </h1>
-
-                    <p className="text-white/90 text-sm leading-relaxed mb-4 max-w-xl">
-
+                    <p className="text-white/90 text-lg leading-relaxed mb-4 max-w-2xl">
                       {item.subtitle}
-
-                    </p>
+                  </p>
 
                     <div className="bg-black/20 border border-white/10 rounded-2xl px-4 py-3 inline-block">
 
-                      <p className="text-xs uppercase tracking-[3px] text-white/70 mb-1">
-
-                        Target Layanan
-
+                      <p className="text-sm text-white/70 mb-1">
+                        Target Pengguna
                       </p>
 
-                      <p className="text-sm font-semibold">
-
+                      <p className="font-semibold">
                         {item.kategori}
-
-                      </p>
+                     </p>
 
                     </div>
 
@@ -377,32 +343,32 @@ export default function Layanan() {
                     )
                   }
                   className={`
-                    px-5
-                    py-4
-                    rounded-2xl
-                    font-bold
-                    transition-all
-                    duration-300
-                    flex
-                    items-center
-                    gap-2
-                    shrink-0
 
-                    ${
-                      openIndex === index
-                        ? "bg-red-500 hover:bg-red-400"
-                        : "bg-cyan-500 hover:bg-cyan-400"
+                  px-6
+                  py-4
+                  rounded-2xl
+                  font-bold
+                  flex
+                  items-center
+                  gap-3
+                  transition-all
+                  duration-300
+
+                  ${openIndex === index
+                      ? "bg-red-500 hover:bg-red-400"
+                      : "bg-cyan-500 hover:bg-cyan-400"
                     }
+
                   `}
                 >
 
                   {openIndex === index
-                    ? "Tutup"
-                    : "Detail"}
+                    ? "Tutup Detail"
+                    : "Lihat Detail"}
 
                   {openIndex === index
-                    ? <ChevronUp size={18} />
-                    : <ChevronDown size={18} />
+                    ? <ChevronUp />
+                    : <ChevronDown />
                   }
 
                 </button>
@@ -413,304 +379,170 @@ export default function Layanan() {
 
             {/* DETAIL */}
             <div
-              className={`overflow-hidden transition-all duration-700 ease-in-out ${
-                openIndex === index
-                  ? "max-h-[2500px] opacity-100"
+              className={`
+
+              overflow-hidden
+              transition-all
+              duration-700
+              ease-in-out
+
+              ${openIndex === index
+                  ? "max-h-[5000px] opacity-100"
                   : "max-h-0 opacity-0"
-              }`}
+                }
+
+              `}
             >
 
-              <div className="p-6 md:p-7">
+              <div className="p-8">
 
-                {/* DESKRIPSI */}
-                <div className="mb-6">
+                <div className="bg-white/5 border border-white/10 rounded-3xl p-6 mb-8">
 
-                  <p className="text-slate-300 leading-relaxed text-sm md:text-[15px]">
-
+                  <p className="text-slate-300 leading-relaxed text-lg">
                     {item.desc}
-
-                  </p>
+               </p>
 
                 </div>
 
-                {/* LANDSCAPE CONTENT */}
-                <div className="grid xl:grid-cols-[1.1fr_1fr] gap-5 items-start">
+                {/* LANDSCAPE */}
+                <div className="grid xl:grid-cols-3 gap-6">
 
-                  {/* LEFT */}
-                  <div className="space-y-5">
+                  {/* PERSYARATAN */}
+                  <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
 
-                    {/* PERSYARATAN */}
-                    <div className="bg-white/[0.04] border border-white/10 rounded-[28px] p-5">
+                    <h2 className="text-cyan-400 text-2xl font-bold mb-5">
+                      Persyaratan
+                    </h2>
 
-                      <h2 className="text-cyan-400 text-xl font-bold mb-5">
+                    <div className="space-y-3">
 
-                        Persyaratan Administrasi
+                      {item.persyaratan.map((syarat, i) => (
 
-                      </h2>
+                        <div
+                          key={i}
+                          className="bg-slate-900/60 rounded-2xl px-4 py-3 text-sm text-slate-300"
+                        >
 
-                      <div className="grid sm:grid-cols-2 gap-3">
+                          • {syarat}
 
-                        {item.persyaratan.map((syarat, i) => (
+                        </div>
 
-                          <div
-                            key={i}
-                            className="
-                              bg-slate-900/60
-                              border border-white/5
-                              rounded-2xl
-                              p-4
-                              min-h-[95px]
-                              flex
-                              items-start
-                            "
-                          >
-
-                            <p className="text-slate-300 text-sm leading-relaxed">
-
-                              • {syarat}
-
-                            </p>
-
-                          </div>
-
-                        ))}
-
-                      </div>
-
-                    </div>
-
-                    {/* OUTPUT */}
-                    <div className="bg-white/[0.04] border border-white/10 rounded-[28px] p-5">
-
-                      <h2 className="text-cyan-400 text-xl font-bold mb-4">
-
-                        Output Digital
-
-                      </h2>
-
-                      <div className="bg-slate-900/60 border border-white/5 rounded-2xl p-5">
-
-                        <p className="text-slate-300 text-sm leading-relaxed">
-
-                          {item.output}
-
-                        </p>
-
-                      </div>
+                      ))}
 
                     </div>
 
                   </div>
 
-                  {/* RIGHT */}
-                  <div className="space-y-5">
+                  {/* SPESIFIKASI */}
+                  <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
 
-                    {/* SPESIFIKASI */}
-                    <div className="bg-white/[0.04] border border-white/10 rounded-[28px] p-5">
+                    <h2 className="text-cyan-400 text-2xl font-bold mb-5">
+                      Spesifikasi
+                    </h2>
 
-                      <h2 className="text-cyan-400 text-xl font-bold mb-5">
+                    <div className="space-y-3 mb-5">
 
-                        Spesifikasi Teknis
+                      {item.spesifikasi.map((spec, i) => (
 
-                      </h2>
-
-                      <div className="grid sm:grid-cols-2 gap-3">
-
-                        {item.spesifikasi.map((spec, i) => (
-
-                          <div
-                            key={i}
-                            className="
-                              bg-slate-900/60
-                              border border-white/5
-                              rounded-2xl
-                              p-4
-                              min-h-[90px]
-                              flex
-                              items-center
-                            "
-                          >
-
-                            <p className="text-slate-300 text-sm leading-relaxed">
-
-                              • {spec}
-
-                            </p>
-
-                          </div>
-
-                        ))}
-
-                      </div>
-
-                    </div>
-
-                    {/* SIMULASI */}
-                    <div className="bg-white/[0.04] border border-white/10 rounded-[28px] p-5">
-
-                      <h2 className="text-cyan-400 text-xl font-bold mb-5">
-
-                        Simulasi Biaya
-
-                      </h2>
-
-                      <div className="grid md:grid-cols-2 gap-4">
-
-                        {/* INPUT */}
-                        <div>
-
-                          {item.calculatorType === "geoDesa" && (
-
-                            <select
-                              value={geoDesaType[index] || ""}
-                              onChange={(e) =>
-                                setGeoDesaType({
-                                  ...geoDesaType,
-                                  [index]: e.target.value,
-                                })
-                              }
-                              className="
-                                w-full
-                                bg-slate-900
-                                border
-                                border-white/10
-                                rounded-2xl
-                                px-5
-                                py-4
-                                text-white
-                                outline-none
-                                mb-4
-                              "
-                            >
-
-                              <option value="">
-                                Pilih Kategori
-                              </option>
-
-                              <option value="subsidi">
-                                GeoDesa Bersubsidi
-                              </option>
-
-                              <option value="reguler">
-                                GeoDesa Reguler
-                              </option>
-
-                            </select>
-
-                          )}
-
-                          <input
-                            type="number"
-                            placeholder={
-                              item.calculatorType === "geoGov"
-                                ? "Jumlah objek pajak"
-                                : "Luas lahan (m²)"
-                            }
-                            value={inputValue[index] || ""}
-                            onChange={(e) =>
-                              setInputValue({
-                                ...inputValue,
-                                [index]: e.target.value,
-                              })
-                            }
-                            className="
-                              w-full
-                              bg-slate-900
-                              border
-                              border-white/10
-                              rounded-2xl
-                              px-5
-                              py-4
-                              text-white
-                              outline-none
-                            "
-                          />
-
-                        </div>
-
-                        {/* RESULT */}
                         <div
-                          className="
-                            rounded-[28px]
-                            bg-gradient-to-br
-                            from-cyan-500/20
-                            to-blue-500/10
-                            border
-                            border-cyan-400/20
-                            p-6
-                            flex
-                            flex-col
-                            justify-center
-                          "
+                          key={i}
+                          className="bg-slate-900/60 rounded-2xl px-4 py-3 text-sm text-slate-300"
                         >
 
-                          <p className="text-slate-300 text-sm mb-2">
-
-                            Estimasi Biaya
-
-                          </p>
-
-                          <h1 className="text-3xl font-black text-cyan-400 leading-tight">
-
-                            {Number(inputValue[index]) > 0
-                              ? `Rp ${calculatePrice(
-                                  item.calculatorType,
-                                  inputValue[index],
-                                  geoDesaType[index]
-                                ).toLocaleString("id-ID")}`
-                              : "Estimasi: Rp 0"}
-
-                          </h1>
-
-                          <div className="mt-4 space-y-2">
-
-                            {item.calculatorType === "geoDesa" && (
-                              <>
-                                <p className="text-slate-300 text-xs">
-
-                                  • Bersubsidi: Rp250.000 / 2.000 m²
-
-                                </p>
-
-                                <p className="text-slate-300 text-xs">
-
-                                  • Reguler: Rp550.000 / 2.000 m²
-
-                                </p>
-                              </>
-                            )}
-
-                            {item.calculatorType === "geoTrace" && (
-                              <p className="text-slate-300 text-xs">
-
-                                • Rekonstruksi & tracking bidang tanah
-
-                              </p>
-                            )}
-
-                            {item.calculatorType === "geoCorp" && (
-                              <p className="text-slate-300 text-xs">
-
-                                • Perhitungan berdasarkan luas kawasan
-
-                              </p>
-                            )}
-
-                            {item.calculatorType === "geoGov" && (
-                              <p className="text-slate-300 text-xs">
-
-                                • Berdasarkan jumlah objek pajak/NOP
-
-                              </p>
-                            )}
-
-                          </div>
+                          • {spec}
 
                         </div>
 
-                      </div>
+                      ))}
 
                     </div>
+
+                    <div className="bg-slate-900/60 rounded-2xl p-4">
+
+                      <h3 className="text-cyan-400 font-bold mb-3">
+                        Output
+                      </h3>
+
+                      <p className="text-slate-300 text-sm leading-relaxed">
+                        {item.output}
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  {/* SIMULASI */}
+                  <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
+
+                    <h2 className="text-cyan-400 text-2xl font-bold mb-5">
+                      Simulasi Biaya
+                    </h2>
+
+                    {item.calculatorType === "geoDesa" && (
+
+                      <select
+                        value={geoDesaType[index] || ""}
+                        onChange={(e) =>
+                          setGeoDesaType({
+                            ...geoDesaType,
+                            [index]: e.target.value,
+                          })
+                        }
+                        className="w-full bg-slate-900 border border-white/10 rounded-2xl px-5 py-4 text-white outline-none mb-5"
+                      >
+
+                        <option value="">
+                          Pilih Kategori GeoDesa
+                        </option>
+
+                        <option value="subsidi">
+                          Masyarakat Bersubsidi
+                        </option>
+
+                        <option value="reguler">
+                          Masyarakat Reguler
+                        </option>
+
+                      </select>
+
+                    )}
+
+                    <input
+                      type="number"
+                      placeholder={
+                        item.calculatorType === "geoGov"
+                          ? "Masukkan jumlah NOP"
+                          : "Masukkan luas lahan (m²)"
+                      }
+                      value={inputValue[index] || ""}
+                      onChange={(e) =>
+                        setInputValue({
+                          ...inputValue,
+                          [index]: e.target.value,
+                        })
+                      }
+                      className="w-full bg-slate-900 border border-white/10 rounded-2xl px-5 py-4 text-white outline-none mb-5"
+                    />
+
+                    <div className="bg-cyan-500/10 border border-cyan-400/20 rounded-3xl p-5">
+
+                      <p className="text-slate-300 mb-2">
+                        Estimasi Total Biaya
+                      </p>
+
+                      <h1 className="text-3xl md:text-4xl font-black text-cyan-400 break-words">
+
+                        {Number(inputValue[index]) > 0
+                          ? `Rp ${calculatePrice(
+                              item.calculatorType,
+                              inputValue[index],
+                              geoDesaType[index]
+                            ).toLocaleString("id-ID")}`
+                          : "Estimasi: Rp 0"}
+
+                      </h1>
+
+                </div>
 
                   </div>
 
