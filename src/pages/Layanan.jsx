@@ -38,6 +38,7 @@ export default function Layanan() {
         "Dokumen alas hak tanah",
         "Surat persetujuan batas sempadan",
         "Patok batas telah terpasang",
+        "Blanko permohonan layanan GeoMeasure+ yang telah diisi lengkap dan ditandatangani pemohon",
         "SKTM/DTKS untuk kategori subsidi",
         "SPPT PBB untuk kategori reguler",
       ],
