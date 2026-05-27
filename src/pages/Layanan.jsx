@@ -23,18 +23,18 @@ export default function Layanan() {
 
     {
       icon: <Landmark size={42} />,
-     title: "GeoDesa",
-    subtitle:
+      title: "GeoDesa",
+      subtitle:
         "Pemetaan dan pengukuran tanah desa berbasis teknologi geospasial modern.",
-    color: "from-cyan-500 to-blue-700",
-    kategori:
+      color: "from-cyan-500 to-blue-700",
+      kategori:
         "Masyarakat Bersubsidi & Reguler",
 
       desc:
         "GeoDesa membantu masyarakat memperoleh data bidang tanah yang akurat, tertata, dan siap digunakan untuk administrasi pertanahan maupun pengembangan wilayah desa berbasis digital.",
 
       persyaratan: [
-      "Fotokopi KTP dan KK pemohon",
+        "Fotokopi KTP dan KK pemohon",
         "Dokumen alas hak tanah",
         "Surat persetujuan batas sempadan",
         "Patok batas telah terpasang",
@@ -82,11 +82,11 @@ export default function Layanan() {
 
     {
       icon: <Map size={42} />,
-    title: "GeoTrace",
-     subtitle:
+      title: "GeoTrace",
+      subtitle:
         "Pelacakan dan rekonstruksi bidang tanah lama berbasis koordinat modern.",
-    color: "from-green-500 to-emerald-700",
-    kategori:
+      color: "from-green-500 to-emerald-700",
+      kategori:
         "Pemilik Sertifikat Lama & Umum",
 
       desc:
@@ -104,7 +104,7 @@ export default function Layanan() {
         "Digitalisasi Peta",
         "Overlay GIS",
         "SIG Integration",
-     ],
+      ],
 
       output:
         "Peta rekonstruksi bidang tanah dan data koordinat digital.",
@@ -137,18 +137,18 @@ export default function Layanan() {
 
     {
       icon: <Building2 size={42} />,
-     title: "GeoCorp",
-     subtitle:
+      title: "GeoCorp",
+      subtitle:
         "Pemetaan kawasan dan monitoring spasial perusahaan berbasis drone.",
-    color: "from-orange-500 to-red-700",
-    kategori:
+      color: "from-orange-500 to-red-700",
+      kategori:
         "Perusahaan, Developer, dan Swasta",
 
       desc:
         "GeoCorp menyediakan layanan pemetaan udara, DEM, kontur, monitoring kawasan, dan dashboard spasial perusahaan.",
 
       persyaratan: [
-      "Akta perusahaan dan NIB",
+        "Akta perusahaan dan NIB",
         "Data kawasan/peta konsesi",
         "SPK atau kerja sama",
         "PIC lapangan",
@@ -158,7 +158,7 @@ export default function Layanan() {
         "Orthophoto HD",
         "DEM & Kontur",
         "Drone Mapping",
-      "Dashboard WebGIS",
+        "Dashboard WebGIS",
       ],
 
       output:
@@ -192,28 +192,28 @@ export default function Layanan() {
 
     {
       icon: <ShieldCheck size={42} />,
-    title: "GeoGov",
-    subtitle:
+      title: "GeoGov",
+      subtitle:
         "Visualisasi pajak dan informasi tanah berbasis data spasial.",
-     color: "from-violet-500 to-purple-700",
-    kategori:
+      color: "from-violet-500 to-purple-700",
+      kategori:
         "Pemerintah Daerah & Publik",
 
       desc:
         "GeoGov menghadirkan visualisasi objek pajak dan informasi tanah berbasis WebGIS untuk monitoring dan pengecekan data spasial secara digital.",
 
       persyaratan: [
-      "Surat permohonan layanan",
-      "Database objek pajak",
-      "Peta administrasi wilayah",
-      "Operator/admin pendamping",
+        "Surat permohonan layanan",
+        "Database objek pajak",
+        "Peta administrasi wilayah",
+        "Operator/admin pendamping",
       ],
 
       spesifikasi: [
         "Visualisasi Pajak",
         "Dashboard WebGIS",
         "Peta Interaktif",
-      "Monitoring Digital",
+        "Monitoring Digital",
       ],
 
       output:
@@ -295,8 +295,7 @@ export default function Layanan() {
 
   return (
 
-    <div className="min-h-screen bg-slate-950 text-white px-6 md:px-14 py-28">
-
+  <div className="min-h-screen bg-slate-950 text-white px-6 md:px-14 py-28">
 
       <div className="max-w-7xl mx-auto text-center mb-20">
 
@@ -321,8 +320,7 @@ export default function Layanan() {
 
       </div>
 
-
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+    <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
 
         {layanan.map((item, index) => (
 
@@ -340,14 +338,12 @@ export default function Layanan() {
             transition-all
             duration-700
 
-            
             ${openIndex === index ? "md:col-span-2" : ""}
 
             `}
           >
 
-            {/* HEADER */}
-            <div className={`bg-gradient-to-r ${item.color} p-8`}>
+          <div className={`bg-gradient-to-r ${item.color} p-8`}>
 
               <div className="flex justify-between items-start gap-6 flex-wrap">
 
@@ -398,7 +394,6 @@ export default function Layanan() {
                   gap-3
                   transition-all
 
-                
                   ${openIndex === index
                       ? "bg-red-500"
                       : "bg-cyan-500"
@@ -422,14 +417,14 @@ export default function Layanan() {
 
             </div>
 
-            {/* DETAIL */}
-            <div
+          <div
               className={`
 
               overflow-hidden
               transition-all
               duration-700
-             ${openIndex === index
+
+              ${openIndex === index
                   ? "max-h-[5000px] opacity-100"
                   : "max-h-0 opacity-0"}
 
@@ -446,10 +441,9 @@ export default function Layanan() {
 
                 </div>
 
-               <div className="grid xl:grid-cols-3 gap-6">
+                <div className="grid xl:grid-cols-3 gap-6">
 
-                  {/* PERSYARATAN */}
-                  <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
+                 <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
 
                     <h2 className="text-cyan-400 text-2xl font-bold mb-5">
                       Persyaratan
@@ -474,8 +468,7 @@ export default function Layanan() {
 
                   </div>
 
-                  {/* SPESIFIKASI */}
-                  <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
+                <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
 
                     <button
                       onClick={() =>
@@ -544,7 +537,7 @@ export default function Layanan() {
 
                       </div>
 
-                   </div>
+                    </div>
 
                   </div>
 
@@ -619,14 +612,71 @@ export default function Layanan() {
 
                       </h1>
 
+                      {item.calculatorType === "geoGov" && (
+
+                        <div className="mt-5 border-t border-cyan-400/10 pt-4">
+
+                          <h3 className="text-sm font-bold text-cyan-300 mb-2">
+                            Sumber Referensi Pajak
+                          </h3>
+
+                          <p className="text-slate-400 text-sm leading-relaxed">
+                            Visualisasi dan estimasi data pajak pada layanan GeoGov
+                            mengacu pada sistem informasi perpajakan daerah dan data
+                            pertanahan digital yang berlaku di Indonesia.
+                          </p>
+
+                          <div className="mt-4 space-y-3">
+
+                            <div className="bg-slate-900/60 rounded-2xl px-4 py-3 border border-white/5">
+
+                              <p className="text-white font-semibold mb-1">
+                                ATR/BPN
+                              </p>
+
+                              <p className="text-slate-400 text-sm">
+                                Referensi data pertanahan dan bidang tanah digital.
+                              </p>
+
+                            </div>
+
+                            <div className="bg-slate-900/60 rounded-2xl px-4 py-3 border border-white/5">
+
+                              <p className="text-white font-semibold mb-1">
+                                Direktorat Jenderal Pajak (DJP)
+                              </p>
+
+                              <p className="text-slate-400 text-sm">
+                                Referensi informasi perpajakan dan objek pajak nasional.
+                              </p>
+
+                            </div>
+
+                            <div className="bg-slate-900/60 rounded-2xl px-4 py-3 border border-white/5">
+
+                              <p className="text-white font-semibold mb-1">
+                                Pemerintah Daerah & PBB-P2
+                              </p>
+
+                              <p className="text-slate-400 text-sm">
+                                Referensi NJOP, data PBB-P2, dan visualisasi pajak daerah.
+                              </p>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      )}
+
                     </div>
 
                   </div>
 
                 </div>
 
-                {/* WORKFLOW */}
-                <div className="mt-10">
+              <div className="mt-10">
 
                   <h2 className="text-3xl font-black text-cyan-400 mb-8">
                     Skema Pelaksanaan
