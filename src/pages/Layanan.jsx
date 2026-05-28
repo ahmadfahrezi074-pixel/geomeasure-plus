@@ -100,7 +100,7 @@ export default function Layanan() {
       ],
 
       spesifikasi: [
-        "Tracking Koordinat",
+        "Plotting Koordinat",
         "Digitalisasi Peta",
         "Overlay GIS",
         "SIG Integration",
