@@ -526,9 +526,7 @@ export default function Layanan() {
                               {spec}
                             </h3>
 
-                            <p className="text-slate-400 text-sm leading-relaxed">
-                              Teknologi modern berbasis sistem geospasial digital
-                              untuk mendukung proses pengukuran dan pemetaan.
+                            <p className="text-slate-400 text-sm leading-relaxed">  .
                             </p>
 
                           </div>
