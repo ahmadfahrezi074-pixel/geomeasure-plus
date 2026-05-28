@@ -84,7 +84,7 @@ export default function Layanan() {
       icon: <Map size={42} />,
       title: "GeoTrace",
       subtitle:
-        "Pelacakan dan rekonstruksi bidang tanah lama berbasis koordinat modernAlih Media Sertifikat Tanah merupakan layanan digitalisasi dokumen pertanahan dari bentuk fisik ke format digital untuk meningkatkan keamanan arsip, mempermudah akses data, serta mendukung pengelolaan informasi pertanahan yang lebih modern dan efisien.",
+        "Alih Media Dokumen Pertanahan Berbasis Digital.",
       color: "from-green-500 to-emerald-700",
       kategori:
         "Pemilik Sertifikat Lama & Umum",
